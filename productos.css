@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 main {
-  background-color: #23242a;
+  background-color: #1b1c1d;
 }
 #caja-marcas {
   height: 7rem;
@@ -19,6 +19,8 @@ main {
   border-radius: 5px;
   height: 45rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
 }
 .dropdown {
   /* border: 1px solid red; */
@@ -88,6 +90,73 @@ main {
   background: #23242a;
 }
 .menu-open {
+  display: block;
+  opacity: 1;
+}
+----------------------------------------------------------- .dropdownPrecios {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dropdownPrecios * {
+  box-sizing: border-box;
+}
+.selectPrecios {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #8521c7b4;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 50%;
+}
+.selectPrecios-clicked {
+  border-bottom: 2px solid #5b0e99;
+}
+.selectPrecios:hover {
+  background: #323741;
+}
+.caretPrecios {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: 0.5s;
+}
+.caretPrecios-rotate {
+  transform: rotate(180deg);
+}
+.menuPrecios {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #2a2f3b;
+  border: 1px solid #363a43;
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 4.5em;
+  left: 50%;
+  width: 26%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.5s;
+  z-index: 1;
+}
+.menuPrecios li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.menuPrecios li:hover {
+  background: #2a2d35;
+}
+.active {
+  background: #23242a;
+}
+.menuPrecios-open {
   display: block;
   opacity: 1;
 }
