@@ -7,12 +7,11 @@ main {
   background-color: #1b1c1d;
 }
 #caja-marcas {
-  height: 7rem;
+  height: 18.5rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  justify-content: space-around;
+  /* border: 1px solid red; */
 }
 #caja-card-productos {
   background-color: #363a43;
@@ -25,6 +24,7 @@ main {
 .dropdown {
   /* border: 1px solid red; */
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0.5rem;
 }
 .dropdown * {
   box-sizing: border-box;
@@ -44,6 +44,7 @@ main {
 .select-clicked {
   border: 2px solid #8521c7b4;
   box-shadow: 0 0 0.8em #8521c7c2;
+  margin-bottom: 12rem;
 }
 .select:hover {
   background: #323741;
@@ -104,14 +105,14 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #8521c7b4;
+  border-bottom: 2px solid #8b23d1b4;
   padding: 0.5rem;
   cursor: pointer;
   transition: background 0.3s;
   width: 50%;
 }
 .selectPrecios-clicked {
-  border-bottom: 2px solid #5b0e99;
+  border-bottom: 2px solid #a832e7;
 }
 .selectPrecios:hover {
   background: #323741;
@@ -132,7 +133,7 @@ main {
   padding: 0.2em 0.5em;
   background: #2a2f3b;
   border: 1px solid #363a43;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
   color: #9fa5b5;
   position: absolute;
   top: 4.5em;
