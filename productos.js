@@ -1,3 +1,5 @@
+//Javascript de Botones Marcas-Producto
+
 const dropdowns = document.querySelectorAll(".dropdown");
 
 // bucle a través de todos los elementos boton-1
@@ -46,6 +48,8 @@ dropdowns.forEach((dropdown) => {
 });
 
 //-----------------------------------------------------------------------------------
+
+//Javascript de Barra de Precios
 
 const dropdownsPrecios = document.querySelectorAll(".dropdownPrecios");
 
