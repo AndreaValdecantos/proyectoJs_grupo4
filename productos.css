@@ -116,6 +116,10 @@ nav img {
   border-radius: 0.5em;
   cursor: pointer;
 }
+.menuCuentas li a {
+  text-decoration: none;
+  color: #9fa5b5;
+}
 .menuCuentas li:hover {
   background: #2a2d35;
 }
