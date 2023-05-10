@@ -3,22 +3,76 @@
   padding: 0%;
   box-sizing: border-box;
 }
+/* -----------------COMIENZO NAV----------------- */
+header {
+  height: 7rem;
+  background-color: #0e0f0f;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #2a2f3b;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+  /* border: 1px solid red; */
+}
+nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav img {
+  height: 100%;
+  /* border: 1px solid fuchsia; */
+}
+
+.busqueda input {
+  border-radius: 5px;
+  height: 3rem;
+  width: 25rem;
+  padding-left: 0.5rem;
+  border: 1px solid #363a43;
+  background-color: #1f2124;
+}
+.sesion-registar {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iniciar-sesion {
+  padding: 0.5rem;
+  border-right: 3px solid #5e17eb;
+  cursor: pointer;
+}
+.registrarse {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+/* -----------------FIN NAV----------------- */
+
+/* -----------------COMIENZO MAIN----------------- */
 main {
   background-color: #1b1c1d;
 }
+#carouselExample {
+  border-bottom: 3px solid #2a2f3b;
+}
 #caja-marcas {
   height: 18.5rem;
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  margin-top: 0.6rem;
   /* border: 1px solid red; */
 }
 #caja-card-productos {
   background-color: #363a43;
   width: 65%;
   border-radius: 5px;
-  height: 45rem;
-  margin-top: 1rem;
+  height: 40rem;
+  margin-top: 1.1rem;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
 }
@@ -46,7 +100,7 @@ main {
   border: 2px solid #8521c7b4;
   box-shadow: 0 0 0.8em #8521c7c2;
   margin-bottom: 12rem;
-  transition:0.1s;
+  transition: 0.1s;
 }
 .select:hover {
   background: #323741;
@@ -96,7 +150,7 @@ main {
   display: block;
   opacity: 1;
 }
-/* ------------------------------------------------------------- */
+/* --------------------------BOTON PRECIOS COMIENZO----------------------------------- */
 .dropdownPrecios {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -139,9 +193,9 @@ main {
   border-radius: 0.3em;
   color: #9fa5b5;
   position: absolute;
-  top: 4.5em;
+  top: 31em;
   left: 50%;
-  width: 26%;
+  width: 32%;
   transform: translateX(-50%);
   opacity: 0;
   display: none;
@@ -170,26 +224,45 @@ main {
   height: 85%;
   /* border: 1px solid rgb(43, 61, 226); */
   margin-top: 2rem;
-  position:sticky;
-  top: 0%;
+  padding-right: 0.5rem;
+  overflow-x: hidden;
 }
+
 .titulos-novedades {
   color: white;
   margin-bottom: 1rem;
+  z-index: 1;
 }
-.novedades{
+.novedades {
   width: 100%;
-  height: 8rem;
+  height: 11rem;
   background-color: rgb(255, 255, 255);
   margin-bottom: 1.2rem;
-  border-radius: 5px;
+  border-radius: 2px;
   border-bottom: 2px solid gray;
-  -webkit-box-shadow: 0px 8px 9px -7px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 8px 9px -7px rgba(0,0,0,0.75);
-box-shadow: 0px 8px 9px -7px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
 }
+/* -----------------FIN NAV----------------- */
 
-@media (min-width:320px) and (max-width:1023px){
+@media (min-width: 320px) and (max-width: 1023px) {
+  header {
+    width: 100%;
+    height: 11rem;
+  }
+  nav img {
+    height: 5rem;
+  }
+  .busqueda input {
+    width: 15rem;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .iniciar-sesion {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   #caja-card-productos {
     width: 95%;
     margin: 0 auto;
@@ -204,5 +277,13 @@ box-shadow: 0px 8px 9px -7px rgba(0,0,0,0.75);
     box-shadow: none;
     padding: 0.3em 0.5em;
     border-bottom: #a832e7 2px solid;
+  }
+  .menuPrecios {
+    width: 90%;
+    top: 12em;
+    border-bottom: #a832e7 2px solid;
+  }
+  .ilustracion-cards {
+    padding: 0px;
   }
 }
