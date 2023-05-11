@@ -1,23 +1,171 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
-
-body{
-    background-color: rgb(79, 221, 221);
+    box-sizing: border-box;
 }
 
 
-
-.titulo {
-    display: flex;
-    justify-content: center;
-    color: #8521c7b4;
-    margin-top: 3rem;
+/* -----------------COMIENZO NAV----------------- */
+header {
+  height: 7rem;
+  background-color: #0e0f0f;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  /* border-bottom: 3px solid #2a2f3b; */
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+  /* border: 1px solid red; */
+}
+nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo-tittle-admi {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 22rem;
+  margin-left: 4rem;
+  /* border: 1px solid rgb(0, 255, 42); */
+}
+.logo-tittle-admi h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  /* border: 1px solid rgb(89, 0, 255); */
+}
+nav img {
+  height: 100%;
+  border-right: 2px solid #ff914d;
+}
+.sesion-registar {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-right: 4.7rem;
+  /* border: 1px solid red; */
+}
+.iniciar-sesion {
+  border-right: 3px solid #5e17eb;
+  margin-right: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.registrarse {
+  cursor: pointer;
 }
 
+.dropdownCuentas {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dropdownCuentas * {
+  box-sizing: border-box;
+}
+.selectCuentas {
+  background-color: #2a2f3b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #2a2f3b;
+  border-radius: 3px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 9rem;
+}
+.select-clickedCuentas {
+  border: 2px solid #8521c7b4;
+  box-shadow: 0 0 0.8em #8521c7c2;
+  transition: 0.1s;
+}
+.selectCuentas:hover {
+  background: #323741;
+}
 
+.caretCuentas {
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: 0.5s;
+}
+.caret-rotateCuentas {
+  transform: rotate(180deg);
+}
+.menuCuentas {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #323741;
+  border: 1px solid #363a43;
+  box-shadow: 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  color: #9fa5b5;
+  position: absolute;
+  right: 0;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.5s;
+  z-index: 1;
+}
+.menuCuentas li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.menuCuentas li a {
+  text-decoration: none;
+  color: #9fa5b5;
+}
+.menuCuentas li:hover {
+  background: #2a2d35;
+}
+.active {
+  background: #23242a;
+}
+.menu-openCuentas {
+  display: block;
+  opacity: 1;
+}
+/* -----------------FIN NAV----------------- */
 
+main {
+    background-color: #1b1c1d;
+  }
 
+.cardIzquierda {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 17rem;
+    height: 28rem;
+}
+
+.cardIzquierda img {
+    height: 60%;
+    border-radius: 60%;
+    border: 3px solid #363a43;
+    
+}
+
+.card-title {
+    color: #5e17eb;
+    text-align: center;
+    margin: 1rem;
+}
+
+.card-text {
+    color: white;
+    text-align: center;
+}
 
 
