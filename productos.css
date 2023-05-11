@@ -21,7 +21,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
 }
 nav img {
   height: 100%;
@@ -40,7 +39,7 @@ nav img {
   color: white;
   display: flex;
   justify-content: center;
-  width: 13rem;
+  width: 19rem;
   /* border: 1px solid red; */
 }
 .iniciar-sesion {
@@ -102,7 +101,7 @@ nav img {
   border-radius: 2px;
   color: #9fa5b5;
   position: absolute;
-  right: 4.4rem;
+  right: 6.5rem;
   margin-top: 5px;
   transform: translateX(-50%);
   opacity: 0;
@@ -272,7 +271,7 @@ main {
   border-radius: 0.3em;
   color: #9fa5b5;
   position: absolute;
-  top: 31em;
+  top: 31.3em;
   left: 50%;
   width: 32%;
   transform: translateX(-50%);
@@ -328,19 +327,51 @@ main {
 @media (min-width: 320px) and (max-width: 1023px) {
   header {
     width: 100%;
-    height: 11rem;
+    height: 10rem;
   }
   nav img {
     height: 5rem;
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+    /* border: 1px solid red; */
+  }
+  .busqueda {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 5px;
   }
   .busqueda input {
     width: 15rem;
-    height: 2rem;
+    height: 1.8rem;
     margin-bottom: 0.5rem;
+  }
+  .iniciar-sesion  {
+   font-size: 13px;
+   margin-bottom: 3rem;
+  }
+  .registrarse  {
+    font-size: 13px;
+    margin-right: 1rem;
+  }
+  .selectCuentas {
+    /* border: 1px solid red; */
+    width: 8rem;
+    height: 2.2rem;
+    font-size: 12.5px;
+    margin-bottom: 3rem;
+  }
+  .menuCuentas {
+    top: 5rem;
+    width:45%;
+    left: 14.2em;
   }
   .iniciar-sesion {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  
+  #carouselExample {
+    display: none;
   }
   #caja-card-productos {
     width: 95%;
@@ -348,6 +379,9 @@ main {
   }
   #caja-marcas {
     height: 7.5rem;
+  }
+  .selectPrecios {
+    width: 100%;
   }
   .select-clicked {
     margin-bottom: 0;
@@ -359,7 +393,7 @@ main {
   }
   .menuPrecios {
     width: 90%;
-    top: 12em;
+    top: 21.5em;
     border-bottom: #a832e7 2px solid;
   }
   .ilustracion-cards {
