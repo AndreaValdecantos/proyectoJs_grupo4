@@ -49,7 +49,38 @@
                     </div>
                 </div>
                 <div class="col" id="caja-contenido-admi">
+                    <h3 class="titulo-listadostock">Edita el Stock</h3>
 
+                    <form id="agregar-productos-form" data-mode="add">
+                        <fieldset>
+                            <label for="nombre-producto">Nombre:</label>
+                            <input type="text" id="nombre-producto" name="nombre-producto">
+                            <label for="precio-producto">Precio:</label>
+                            <input type="number" id="precio-producto" name="precio-producto">
+                            <label for="codigo-producto">Codigo de producto:</label>
+                            <input type="number" id="codigo-producto" name="codigo-producto">
+                        </fieldset>
+                        <fieldset>
+                            <label for="descripcion-producto">Descripcion:</label>
+                            <input type="text" id="descripcion-producto" name="descripcion-producto">
+                            <label for="imagen-producto">URL de iamgen:</label>
+                            <input type="text" id="imagen-producto" name="imagen-producto">
+                        </fieldset>
+                        <div class="cajaboton">
+                            <button type="submit" id="boton-agregar-info">Agregar</button>
+                        </div>
+                    </form>
+                    <table id="tabla-productos">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Codigo unico</th>
+                                <th>Descripcion</th>
+                                <th>Imagen</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
