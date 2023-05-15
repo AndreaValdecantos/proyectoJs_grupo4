@@ -48,3 +48,100 @@ dropdownsCuentas.forEach((dropdownC) => {
 });
 
 //-----------------------------------------------------------------------------------
+
+let productos = [];
+
+//Obtener elementos del DOM.
+const tablaProductos = document.getElementById("tabla-productos");
+const agregarProductosForm = document.getElementById("agregar-productos-form");
+const nombreProducto = document.getElementById("nombre-producto");
+const precioProducto = document.getElementById("precio-producto");
+const descripcionProducto = document.getElementById("descripcion-producto");
+const botonAgregarInfo = document.getElementById("boton-agregar-info");
+
+//Funcion para agregar productos
+botonAgregarInfo.addEventListener("click", (event) => {
+  event.preventDefault();
+  const nombre = nombreProducto.value;
+  const precio = precioProducto.value;
+  const descripcion = descripcionProducto.value;
+  const mode = agregarProductosForm.dataset.mode;
+  const editId = agregarProductosForm.dataset.editId;
+
+  if (mode === "add") {
+    const id = uuidv4();
+    const producto = { id, nombre, precio, descripcion };
+    productos.push(producto);
+  } else if (mode === "edit") {
+    const index = productos.findIndex((producto) => {
+      producto.id === editId;
+    });
+    if (index !== -1) {
+      const product = productos[index];
+      product.name = nombre;
+      product.precio = precio;
+      product.descripcion = descripcion;
+    }
+  }
+  //Limpiar formulario
+  agregarProductosForm.reset();
+  agregarProductosForm.dataset = "add";
+  botonAgregarInfo.textContent = "Agregar";
+  mostrarProductos();
+});
+
+//Funcion para editar
+tablaProductos.addEventListener("click", (event) => {
+  if (event.target.classList.contains("edit")) {
+    const id = event.target.dataset.id;
+    const producto = productos.find((producto) => {
+      producto.id === id;
+    });
+    if (producto) {
+      document.getElementById("nombre-producto").value = producto.name;
+      document.getElementById("precio-producto").value = producto.precio;
+      document.getElementById("descripcion-producto").value =
+        producto.descripcion;
+
+      //Setar el formulario en Editar
+      agregarProductosForm.dataset.mode = "edit";
+      agregarProductosForm.dataset.editId = id;
+      botonAgregarInfo.textContent = "Editar";
+    }
+  }
+});
+
+//Funcion eleminar producto
+tablaProductos.addEventListener("click", (event) => {
+  if (event.target.classList.contains("delate")) {
+    const id = event.target.dataset.id;
+    const index = productos.findIndex((producto) => {
+      producto.id === id;
+    });
+    if (index !== -1) {
+      productos.splice(index, 1);
+      mostrarProductos();
+    }
+  }
+});
+
+const mostrarProductos = () => {
+  tablaProductos.querySelector("tbody").innerHTML = "";
+  productos.forEach((producto) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+    <td>${producto.name}</td>
+    <td>${producto.precio}</td>
+    <td>${producto.descripcion}</td>
+    <td>
+    <button class="btn btn-primary edit" data-id="${producto.id}">Editar</button>
+    <button class="btn btn-primary delete" data-id="${producto.id}">Eliminar</button>
+    </td>
+    `;
+    tablaProductos.querySelector("tbody").appendChild(tr);
+  });
+};
+
+function uuidv4() {
+  return crypto.randomUUID();
+}
