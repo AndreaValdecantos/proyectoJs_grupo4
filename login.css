@@ -1,0 +1,66 @@
+.boton-login{
+    background-color: #8521c7b4;
+    color: white;
+}
+.boton-login:hover{
+    border: 0.1em solid #8521c7c2;
+    background-color: whitesmoke;
+    font-weight: 500;
+    color: black;
+}
+
+.modal-content{
+    border: 0.15em solid #8521c7c2;
+}
+
+#usuario, #clave{
+    color: #8521c7c2;
+}
+
+.form-control:hover{
+    background-color: whitesmoke;
+}
+
+.form-control-incorrecto input, .form-control-incorrecto label{
+    color: rgb(242, 0, 0);
+    border-color: rgb(242, 0, 0);
+}
+
+.form-control-correcto input, .form-control-correcto label{
+    color: rgb(126, 206, 5);
+    border-color: rgb(126, 206, 5);
+}
+
+.link-registro, .modal-titulo{
+    color: #8521c7c2;
+}
+
+.mensaje-error{
+    display: none;
+}
+.mensaje-error-activo{
+    display: block;
+}
+
+.mensaje-formulario{
+    display: none;
+    background-color: red;
+    border: 0.1em solid black;
+    padding: 0.3em;
+    margin: 1em;
+    color: white;
+}
+.mensaje-formulario-activo{
+    display: block;
+}
+
+.mensaje-usuario{
+    display: none;
+}
+.mensaje-usuario-activo{
+    display: block;
+}
+
+
+/* #8521c7b4 */
+/* #8521c7c2 más oscuro */
