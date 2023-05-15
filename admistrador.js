@@ -48,24 +48,26 @@ dropdownsCuentas.forEach((dropdownC) => {
 });
 
 //-----------------------------------------------------------------------------------
-
 let productos = [];
 
-//Obtener elementos del DOM.
-const tablaProductos = document.getElementById("tabla-productos");
-const agregarProductosForm = document.getElementById("agregar-productos-form");
-const nombreProducto = document.getElementById("nombre-producto");
-const precioProducto = document.getElementById("precio-producto");
-const descripcionProducto = document.getElementById("descripcion-producto");
-const botonAgregarInfo = document.getElementById("boton-agregar-info");
+//Obtener los elementos del DOM
+
+const listaProductos = document.getElementById("lista-productos");
+const agregarProductosForm = document.getElementById("agregarProductosForm");
+const nombreProducto = document.getElementById("nombreProducto");
+const precioProducto = document.getElementById("precioProducto");
+const descripcionProducto = document.getElementById("descripcionProducto");
+const addProductoButton = document.getElementById("addProductoButton");
 
 //Funcion para agregar productos
-botonAgregarInfo.addEventListener("click", (event) => {
-  event.preventDefault();
-  const nombre = nombreProducto.value;
+
+addProductoButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const nombre = nombreProducto.value; // value es el valor que tiene el input
   const precio = precioProducto.value;
   const descripcion = descripcionProducto.value;
-  const mode = agregarProductosForm.dataset.mode;
+  const mode = agregarProductosForm.dataset.mode; // dataset es un objeto que contiene todos los atributos de un elemento
   const editId = agregarProductosForm.dataset.editId;
 
   if (mode === "add") {
@@ -73,51 +75,54 @@ botonAgregarInfo.addEventListener("click", (event) => {
     const producto = { id, nombre, precio, descripcion };
     productos.push(producto);
   } else if (mode === "edit") {
-    const index = productos.findIndex((producto) => {
-      producto.id === editId;
-    });
+    const index = productos.findIndex((producto) => producto.id === editId);
     if (index !== -1) {
-      const product = productos[index];
-      product.name = nombre;
-      product.precio = precio;
-      product.descripcion = descripcion;
+      const producto = productos[index];
+      producto.nombre = nombre;
+      producto.precio = precio;
+      producto.descripcion = descripcion;
     }
   }
-  //Limpiar formulario
+
+  //Limpiar el formulario
   agregarProductosForm.reset();
-  agregarProductosForm.dataset = "add";
-  botonAgregarInfo.textContent = "Agregar";
+  agregarProductosForm.dataset.mode = "add";
+  addProductoButton.textContent = "Agregar";
+
+  //llamar a una funcion que actualiza la lista de productos
   mostrarProductos();
 });
 
-//Funcion para editar
-tablaProductos.addEventListener("click", (event) => {
-  if (event.target.classList.contains("edit")) {
-    const id = event.target.dataset.id;
-    const producto = productos.find((producto) => {
-      producto.id === id;
-    });
-    if (producto) {
-      document.getElementById("nombre-producto").value = producto.name;
-      document.getElementById("precio-producto").value = producto.precio;
-      document.getElementById("descripcion-producto").value =
-        producto.descripcion;
+// Funcion para editar productos
 
-      //Setar el formulario en Editar
+listaProductos.addEventListener("click", (e) => {
+  if (e.target.classList.contains("edit")) { // Si cuando escucha el click el elemento tiene la clase edit retorna true 
+    const idCapturado = e.target.dataset.id; // dataset es un objeto que contiene todos los atributos de un elemento
+    const producto = productos.find((producto) => ( 
+      producto.id === idCapturado ));  
+
+    if (producto) {
+      document.getElementById("nombreProducto").value = producto.nombre;
+      document.getElementById("precioProducto").value = producto.precio;
+      document.getElementById("descripcionProducto").value =
+        producto.descripcion;
+        
+      // Setear el formulario para que este en modo editar
       agregarProductosForm.dataset.mode = "edit";
-      agregarProductosForm.dataset.editId = id;
-      botonAgregarInfo.textContent = "Editar";
+      // almacenar el id del producto que se esta editando
+      agregarProductosForm.dataset.editId = id; // va con la linea 29
+      // cambiar el texto del boton
+      addProductoButton.textContent = "Editar";
     }
   }
 });
 
-//Funcion eleminar producto
-tablaProductos.addEventListener("click", (event) => {
-  if (event.target.classList.contains("delate")) {
-    const id = event.target.dataset.id;
-    const index = productos.findIndex((producto) => {
-      producto.id === id;
-    });
+// Funcion para eliminar productos
+
+listaProductos.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    const id = e.target.dataset.id;
+    const index = productos.findIndex((producto) => producto.id === id); // tiene que ser true para que lo encuentre
     if (index !== -1) {
       productos.splice(index, 1);
       mostrarProductos();
@@ -125,23 +130,38 @@ tablaProductos.addEventListener("click", (event) => {
   }
 });
 
+// Funcion para mostrar los productos en el DOM
+
 const mostrarProductos = () => {
-  tablaProductos.querySelector("tbody").innerHTML = "";
+  listaProductos.querySelector("tbody").innerHTML = ""; // para que pueda resetear la tabla
   productos.forEach((producto) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-    <td>${producto.name}</td>
-    <td>${producto.precio}</td>
+    <td>${producto.nombre}</td>
+    <td>$${producto.precio}</td>
     <td>${producto.descripcion}</td>
     <td>
     <button class="btn btn-primary edit" data-id="${producto.id}">Editar</button>
-    <button class="btn btn-primary delete" data-id="${producto.id}">Eliminar</button>
+    <button class="btn btn-danger delete" data-id="${producto.id}">Eliminar</button>
     </td>
     `;
-    tablaProductos.querySelector("tbody").appendChild(tr);
+    listaProductos.querySelector("tbody").appendChild(tr);
   });
+
+  // Guardar los productos en el local storage
+  localStorage.setItem("productos", JSON.stringify(productos));
 };
+
+// Funcion para generar un id unico
 
 function uuidv4() {
   return crypto.randomUUID();
+}
+// obtener los productos del local storage
+
+const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
+ 
+if (productosLocalStorage) {
+  productos = productosLocalStorage;
+  mostrarProductos();
 }
