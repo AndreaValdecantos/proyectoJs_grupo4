@@ -150,3 +150,8 @@ dropdownsPrecios.forEach((dropdownP) => {
 });
 
 //-----------------------------------------------------------------------------------
+
+import { productos } from "./admistrador";
+
+
+

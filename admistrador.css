@@ -174,13 +174,18 @@ form {
   margin-bottom: 4rem;
   /* border: 1px solid rebeccapurple; */
 }
+fieldset {
+  /* border: 1px solid royalblue; */
+  text-align: center;
+}
 label {
   color: white;
 }
 input {
   background-color: #2a2f3b;
   border: 2px solid #323741;
-  margin-right: 1rem;
+  width: 10rem;
+  margin-right: 0.5rem;
   border-radius: 3px;
   color: white;
 }
@@ -189,7 +194,7 @@ input {
   padding: 3px 0.5rem 3px 0.5rem;
   color: white;
   margin-top: 5px;
-  border:2px solid #23242a;
+  border: 2px solid #23242a;
   border-radius: 3px;
   transition: 0.2s;
 }
@@ -200,18 +205,18 @@ h2 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   color: white;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #lista-productos {
   /* border: 1px solid darkgreen; */
   width: 100%;
 }
 th {
-  width: 10rem;
   text-align: center;
   color: white;
   padding-bottom: 5px;
   border-bottom: 3px solid #323741;
+  /* border: 1px solid darkgreen; */
 }
 tr {
   padding-top: 5px;
@@ -219,12 +224,15 @@ tr {
   color: white;
   /* border: 1px solid white; */
 }
+/* td {
+  border: 1px solid white;
+} */
 .edit {
   background-color: #323741;
   padding: 3px 0.5rem 3px 0.5rem;
   color: white;
   margin-top: 5px;
-  border:2px solid #23242a;
+  border: 2px solid #23242a;
   border-radius: 3px;
   transition: 0.2s;
 }
@@ -237,11 +245,17 @@ tr {
   padding: 3px 0.5rem 3px 0.5rem;
   color: white;
   margin-top: 5px;
-  border:2px solid #23242a;
+  border: 2px solid #23242a;
   border-radius: 3px;
   transition: 0.2s;
 }
 .delete:hover {
   border: 2px solid #5e17eb;
   background-color: #323741;
+}
+
+.producto-imagen {
+  width: 5rem;
+  height:5rem;
+  /* border: 1px solid red; */
 }
