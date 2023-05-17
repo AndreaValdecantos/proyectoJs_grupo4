@@ -9,6 +9,18 @@
     color: black;
 }
 
+.boton-login-ocultar{
+    display: none;
+}
+
+.boton-logout-ocultar{
+    display: none;
+}
+
+.pag-administracion-ocultar{
+    display: none;
+}
+
 .modal-content{
     border: 0.15em solid #8521c7c2;
 }
@@ -20,7 +32,7 @@
 .form-control:hover{
     background-color: whitesmoke;
 }
-
+/* 
 .form-control-incorrecto input, .form-control-incorrecto label{
     color: rgb(242, 0, 0);
     border-color: rgb(242, 0, 0);
@@ -29,13 +41,13 @@
 .form-control-correcto input, .form-control-correcto label{
     color: rgb(126, 206, 5);
     border-color: rgb(126, 206, 5);
-}
+} */
 
 .link-registro, .modal-titulo{
     color: #8521c7c2;
 }
 
-.mensaje-error{
+/* .mensaje-error{
     display: none;
 }
 .mensaje-error-activo{
@@ -52,7 +64,7 @@
 }
 .mensaje-formulario-activo{
     display: block;
-}
+} */
 
 .mensaje-usuario{
     display: none;
