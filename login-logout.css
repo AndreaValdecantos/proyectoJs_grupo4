@@ -51,6 +51,25 @@
     display: block;
 }
 
+#div-clave{
+    position: relative;
+}
+#div-clave img{
+    width: 22px;
+    position: absolute;
+    z-index: 50;
+    right: 10px;
+    bottom: 8px;
+    cursor: pointer;
+}
+
+.mostrar{
+    display: block;
+}
+
+.ocultar{
+    display: none;
+}
 
 /* #8521c7b4 */
 /* #8521c7c2 más oscuro */

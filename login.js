@@ -1,6 +1,32 @@
 const formulario = document.getElementById('formulario')
 const inputs = document.querySelectorAll('#formulario input')
 
+const mostrarClave = document.querySelector('#div-clave #mostrar-clave')
+const ocultarClave = document.querySelector('#div-clave #ocultar-clave')
+const inputClave = document.getElementById('clave')
+
+const cerrarModal = document.getElementById('cerrar-modal')
+
+cerrarModal.addEventListener('click', e => {
+    inputClave.type = 'password';
+    ocultarClave.classList.add('ocultar');
+    mostrarClave.classList.remove('ocultar');
+    formulario.reset()
+})
+
+mostrarClave.addEventListener('click', e => {
+        mostrarClave.classList.add('ocultar');
+        ocultarClave.classList.remove('ocultar')
+        inputClave.type = 'text';
+})
+
+ocultarClave.addEventListener('click', e => {
+    ocultarClave.classList.add('ocultar');
+    mostrarClave.classList.remove('ocultar');
+    inputClave.type = 'password';
+})
+
+
 const validarFormulario = (e) => {
     if (e.target.value != '') {
         document.querySelector('#formulario .mensaje-usuario').classList.remove('mensaje-usuario-activo')

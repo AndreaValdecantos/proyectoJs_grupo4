@@ -14,27 +14,26 @@
 
     <main id="login">
 
-        <button type="button" class="btn boton-login" data-bs-toggle="modal" data-bs-target="#exampleModal" id="boton-login">
+        <button type="button" class="btn boton-login" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="boton-login">
             Login
         </button>
 
-        <div class="modal fade modal-form" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade modal-form" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5 modal-titulo" id="exampleModalLabel">Inicio de sesión</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrar-modal"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="formulario" class="formulario">
+                        <form id="formulario" class="formulario" autocomplete="off">
                             <div class="mb-3" id="div-usuario">
                                 <label for="usuario" class="form-label">Email</label>
                                 <input type="email" class="form-control" name="usuario" id="usuario" aria-describedby="emailHelp" required>
                             </div>
                             <div class="mb-3" id="div-clave">
                                 <label for="clave" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" name="clave" id="clave" required>
+                                <input type="password" class="form-control" name="clave" id="clave" required><img src="imgLogin/mostrarClave.png" alt="mostrar contraseña" id="mostrar-clave"><img src="imgLogin/ocultarClave.png" alt="ocultar contraseña" id="ocultar-clave" class="ocultar">
                             </div>
                             <div>
                                 <p>¿No tienes una cuenta? <a href="#" class="link-registro">Registrarse</a></p>
