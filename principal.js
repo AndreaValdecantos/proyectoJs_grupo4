@@ -1,3 +1,5 @@
+//PARA MOSTRAR LOS BOTONES DE LOGIN/LOGOUT/ADMINISTRACIÓN SEGÚN EL ESTADO DE LA SESIÓN
+
 let usuarioLogueado = JSON.parse(localStorage.getItem('usuario_logueado')) || false
 let botonLogin = document.getElementById('boton-login')
 let botonLogout = document.getElementById('boton-logout')
@@ -10,7 +12,7 @@ if (!usuarioLogueado) { //no logueado
 } else { //logueado
     botonLogin.classList.add('boton-login-ocultar')
     botonLogout.classList.remove('boton-logout-ocultar')
-    if (usuarioLogueado.nombreUsuario == 'admin@correo') {
+    if (usuarioLogueado.email == 'admin@correo') {
         paginaAdministracion.classList.remove('pag-administracion-ocultar')
     } else {
         paginaAdministracion.classList.add('pag-administracion-ocultar')

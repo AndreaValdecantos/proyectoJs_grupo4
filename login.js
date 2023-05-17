@@ -1,3 +1,5 @@
+//TODO EL LOGIN DEL USUARIO, se necesita el localStorage del registro
+
 const formulario = document.getElementById('formulario')
 const inputs = document.querySelectorAll('#formulario input')
 
@@ -43,15 +45,15 @@ formulario.addEventListener('submit', (e) => {
 
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 
-    usuarios.push({ nombreUsuario: "admin@correo", clave: "1234" })
-    usuarios.push({ nombreUsuario: "andrea@correo", clave: "1111" })
+    usuarios.push({ nombre: "Administrador", email: "admin@correo", clave: "1234" })
+    usuarios.push({ nombre:"Andrea", email: "andrea@correo", clave: "1111" })
 
     localStorage.setItem('usuario', JSON.stringify(usuarios))
 
-    const nombreUsuario = document.getElementById('usuario').value
+    const email = document.getElementById('email').value
     const clave = document.getElementById('clave').value
     
-    let usuarioLogueado = usuarios.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.clave === clave)
+    let usuarioLogueado = usuarios.find(usuario => usuario.email === email && usuario.clave === clave)
 
     if (usuarioLogueado) {
         window.location.href = 'principal.html'
