@@ -40,16 +40,6 @@
     background-color: whitesmoke;
 }
 
-.form-control-incorrecto input, .form-control-incorrecto label{
-    color: rgb(242, 0, 0);
-    border-color: rgb(242, 0, 0);
-}
-
-.form-control-correcto input, .form-control-correcto label{
-    color: rgb(126, 206, 5);
-    border-color: rgb(126, 206, 5);
-}
-
 .link-registro, .modal-titulo{
     color: #8521c7c2;
 }
