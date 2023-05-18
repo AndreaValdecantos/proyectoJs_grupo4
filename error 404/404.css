@@ -47,6 +47,20 @@ nav img {
 
 }
 
+.booton{
+    margin-bottom: 1rem;
+    background-color: #7b06ef;
+    color: aliceblue;
+    border-radius: 1rem;
+    width:0rem;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+font-weight: bold;
+align-items: center;
+}
+
+
 
 /* -----------------FIN NAV----------------- */
 
