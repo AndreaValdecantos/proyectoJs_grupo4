@@ -1,0 +1,29 @@
+body {
+  /* background: #4b0082; */
+  background: linear-gradient(to bottom, #363a43, #5e17eb);
+}
+
+.bg {
+  background-image: url(./imageregistro/pexels-anete-lusina-4792722.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+#formulario {
+  background: #0e0f0f !important;
+  color: white;
+}
+
+.form-control {
+  border: none;
+  border-bottom: 3px solid #2a2f3b !important;
+  background: #0e0f0f !important;
+}
+
+.btn {
+  background-color: #5e17eb;
+  color: white;
+  width: 25rem;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
