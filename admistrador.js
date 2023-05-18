@@ -60,7 +60,7 @@ const modeloProducto = document.getElementById("modeloProducto");
 const precioProducto = document.getElementById("precioProducto");
 const descripcionProducto = document.getElementById("descripcionProducto");
 const imagenProducto = document.getElementById("imagenProducto");
-const addProductoButton = document.getElementById("addProductoButton");
+export const addProductoButton = document.getElementById("addProductoButton");
 
 //Funcion para agregar productos
 
@@ -176,7 +176,7 @@ const mostrarProductos = () => {
     modeloProducto.textContent = producto.modelo;
 
     const precioProducto = document.createElement("td");
-    precioProducto.textContent = producto.precio;
+    precioProducto.textContent = "$"+producto.precio;
 
     const descripcionProducto = document.createElement("td");
     descripcionProducto.textContent = producto.descripcion;

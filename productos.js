@@ -150,8 +150,7 @@ dropdownsPrecios.forEach((dropdownP) => {
 });
 
 //-----------------------------------------------------------------------------------
+import { listaProductos } from "./admistrador.js";
 
-import { productos } from "./admistrador";
-
-
+console.log(listaProductos)
 
