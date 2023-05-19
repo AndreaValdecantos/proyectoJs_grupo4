@@ -36,6 +36,7 @@ nav img {
   background-color: #1f2124;
   color: white;
 }
+/*---------------INICIO MODAL----------------*/
 .sesion-registar {
   color: white;
   display: flex;
@@ -49,10 +50,87 @@ nav img {
   padding-right: 10px;
   cursor: pointer;
 }
-.registrarse {
+.iniciar-sesion a {
   cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.registrarse a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.form-label {
+  color: #0e0f0f
+}
+.modal-backdrop {
+  width: 0;
+}
+.boton-logout {
+  border: 0.1em solid #8521c7c2;
+}
+.boton-logout:hover {
+  background-color: #8521c7b4;
+  color: white;
+}
+.boton-login-ocultar {
+  display: none;
+}
+.boton-logout-ocultar {
+  display: none;
+}
+.pag-administracion-ocultar {
+  display: none;
+}
+/* .modal-content {
+  border: 3px solid #fc7d2e;
+} */
+#usuario,
+#clave {
+  color: #0e0f0f;
+}
+.form-control:hover {
+  background-color: whitesmoke;
 }
 
+.link-registro,
+.modal-titulo {
+  color: #5e17eb;
+  text-decoration: none;
+}
+.mensaje-usuario {
+  display: none;
+}
+.mensaje-usuario-activo {
+  display: block;
+  color: red;
+}
+.sin-cuenta p {
+  color: #0e0f0f;
+}
+#div-clave {
+  position: relative;
+}
+#div-clave img {
+  width: 22px;
+  position: relative;
+  z-index: 50;
+  left: 27rem;
+  bottom: 2rem;
+  cursor: pointer;
+}
+.mostrar {
+  display: block;
+}
+.ocultar {
+  display: none;
+}
+#enviar-login {
+  background-color: #5e17eb;
+  color: white;
+}
+
+/*---------------------------FIN MODAL----------------------*/
 .dropdownCuentas {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0.5rem;
@@ -147,10 +225,10 @@ main {
   /* border: 1px solid red; */
 }
 #caja-card-productos {
-  background-color: #363a43;
+  background-color: #1b1c1d;
   width: 65%;
   border-radius: 5px;
-  height: 32.9rem;
+  height: 40rem;
   margin-top: 1.1rem;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
@@ -301,7 +379,7 @@ main {
 .ilustracion-cards {
   width: 100%;
   height: 85%;
-  border: 1px solid rgb(43, 61, 226);
+  /* border: 1px solid rgb(43, 61, 226); */
   margin-top: 2rem;
   padding-right: 0.5rem;
   overflow-x: hidden;
@@ -314,7 +392,7 @@ main {
 }
 .novedades {
   width: 100%;
-  height: 11rem;
+  height: 8rem;
   background-color: rgb(255, 255, 255);
   margin-bottom: 1.2rem;
   border-radius: 2px;
@@ -323,7 +401,86 @@ main {
   -moz-box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
 }
-/* -----------------FIN NAV----------------- */
+/* -----------------FIN MAIN----------------- */
+
+/* -----------------COMIENZO FOOTER----------*/
+footer {
+  background-color: #0e0f0f;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-top: 3px solid #2a2f3b;
+}
+.logo-footer {
+  height: 4.5rem;
+  /* border: 1px solid red; */
+}
+.logo-footer img {
+  width: 100%;
+  height: 100%;
+}
+.contacton-telefono {
+  text-align: center;
+  color: white;
+  /* border: green 1px solid; */
+}
+.contacto {
+  margin-top: 8px;
+}
+.contacto p {
+  margin: 0%;
+  padding: 0%;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.contacto p:hover {
+  color: #5e17eb;
+}
+.contacto h6 {
+  margin: 0%;
+  padding: 0%;
+  font-size: 15px;
+}
+.telefono p {
+  margin: 0%;
+  padding: 0%;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.telefono p:hover {
+  color: #5e17eb;
+}
+.telefono h6 {
+  margin: 0%;
+  padding: 0%;
+  font-size: 15px;
+}
+.redes {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  color: white;
+  width: 7rem;
+}
+.redes h6 {
+  margin: 0%;
+  padding: 0%;
+}
+.iconos-redes {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: 0.2s;
+}
+svg:hover {
+  color: #5e17eb;
+}
+/* -----------------FIN FOOTER----------*/
 
 @media (min-width: 320px) and (max-width: 1023px) {
   header {
@@ -346,21 +503,21 @@ main {
     height: 1.8rem;
     margin-bottom: 0.5rem;
   }
-  .iniciar-sesion  {
-   font-size: 13px;
-   margin-bottom: 3rem;
-   margin-right: 5px;
-   padding-right: 5px;
-   display: flex;
-   align-items: center;
-   /* border: 1px solid red; */
+  .iniciar-sesion {
+    font-size: 13px;
+    margin-bottom: 3rem;
+    margin-right: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
   }
-  .registrarse  {
+  .registrarse {
     font-size: 13px;
     margin-right: 1rem;
     height: 2rem;
     display: flex;
-   align-items: center;
+    align-items: center;
     /* border: 1px solid rgb(0, 174, 255); */
   }
   .selectCuentas {
@@ -372,14 +529,14 @@ main {
   }
   .menuCuentas {
     top: 5rem;
-    width:45%;
+    width: 45%;
     left: 14.2em;
   }
   .iniciar-sesion {
     padding-top: 0;
     padding-bottom: 0;
   }
-  
+
   #carouselExampleRide {
     display: none;
   }
