@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,16 +13,41 @@
 
 <body>
     <header>
-        <nav>
-            <img src="./image-main/logofinal.png" alt="">
-            <div class="busqueda">
-                <input type="search" name="" id="barra-buscar" placeholder="Buscar">
-            </div>
-            <div class="sesion-registar">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <div class="logo-nombre logo-nombre-ocultar">
+                    <a class="navbar-brand" href="productos.html"><img src="./image-main/logofinal.png" alt="logo"></a>
+                    <h3 class="ocultar-titulo">Registro</h3>
+                  </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" id="hamburguesa"></span>
+                <span class="menu-usuario" id="nombre-usuario-logueado"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <form class="d-flex formulario-busqueda" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn boton-buscar" type="submit">Buscar</button>
+                </form>
 
-                <h6 class="iniciar-sesion" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="boton-login">
-                    Iniciar sesion
-                </h6>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item" id="boton-login">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar sesión</a>
+                  </li>
+                  <li class="nav-item" id="pagina-administracion">
+                    <a class="nav-link" href="administrador.html">Administración</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item" id="boton-registro">
+                    <a class="nav-link" href="./registro.html">Registrarse</a>
+                  </li>
+                  <li class="nav-item" id="boton-logout">
+                    <a class="nav-link">Logout</a>
+                  </li>
+                </ul>
+
                 <div class="modal fade modal-form" id="staticBackdrop" data-bs-backdrop="static"
                     data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -33,7 +58,7 @@
                                     id="cerrar-modal"></button>
                             </div>
                             <div class="modal-body">
-                                <form id="formulario" class="formulario" autocomplete="off">
+                                <form id="formulario-login" class="formulario-login" autocomplete="off">
                                     <div class="mb-3" id="div-email">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control" name="email" id="email"
@@ -61,22 +86,10 @@
                         </div>
                     </div>
                 </div>
-
-                <h6 class="iniciar-sesion"><a href="./registro.html">Registrarse</a></h6>
-                <h6 class="registrarse"><a href="./about.html">Nosotros</a></h6>
-                <!-- <div class="dropdownCuentas">
-                    <div class="selectCuentas">
-                        <span class="selectedCuentas">Lautaro G. Ruiz</span>
-                        <div class="caretCuentas"></div>
-                    </div>
-                    <ul class="menuCuentas">
-                        <li><a href="./administrador.html">Administrador</a></li>
-                        <li>Nosotros</li>
-                        <li>Cerrar sesion</li>
-                    </ul>
-                </div> -->
+                
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
 
     <main>
@@ -198,5 +211,6 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
 <script src="./productos.js"></script>
+<script src="./login.js"></script>
 
 </html>

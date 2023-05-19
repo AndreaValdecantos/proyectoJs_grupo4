@@ -1,94 +1,170 @@
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  background-color: #1b1c1d;
+}
+
+.body-registro {
+  background: linear-gradient(to bottom, #363a43, #5e17eb);
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.bg {
+  background-image: url(./imageregistro/pexels-anete-lusina-4792722.jpg) !important;
+  background-position: center center;
+  background-size: cover;
+}
+
+
 /* -----------------COMIENZO NAV----------------- */
 header {
-  height: 7rem;
   background-color: #0e0f0f;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   border-bottom: 3px solid #2a2f3b;
   position: sticky;
   top: 0%;
+  margin-bottom: 0;
   z-index: 1;
   /* border: 1px solid red; */
 }
+
 nav {
   height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-nav img {
-  height: 100%;
-  /* border: 1px solid fuchsia; */
+  padding-top: 1em !important;
 }
 
-.busqueda input {
-  border-radius: 5px;
-  height: 3rem;
-  width: 25rem;
-  padding-left: 0.5rem;
+.navbar-collapse {
+  background-color: #0e0f0f;
+  padding: 1em;
+}
+
+.navbar-brand img {
+  height: 7rem;
+}
+
+.formulario-busqueda input {
   border: 1px solid #363a43;
   background-color: #1f2124;
   color: white;
 }
-/*---------------INICIO MODAL----------------*/
-.sesion-registar {
+
+.formulario-busqueda input:hover,
+.formulario-busqueda input:focus {
+  background-color: #1f2124;
   color: white;
+}
+
+.formulario-busqueda input::placeholder {
+  color: rgb(97, 97, 97);
+}
+
+.boton-buscar {
+  background-color: #5e17eb;
+  border: #5e17eb solid 0.1em;
+  color: white;
+}
+
+.boton-buscar:hover {
+  color: white;
+  background-color: orange;
+}
+
+.navbar-nav li {
+  margin-top: 0.5em;
+  margin-left: 0.4em;
+}
+
+.logo-nombre {
   display: flex;
-  justify-content: center;
-  width: 19rem;
+  align-items: center;
+  height: 7rem;
+  border-right: solid 0.2em orange;
+  color: white;
+  padding-right: 0.5em;
+  margin-bottom: 3em;
+}
+
+.logo-nombre a {
+  display: block;
+  height: 7rem;
+  padding: 0;
+}
+
+.logo-nombre-ocultar{
+  border: 0;
+}
+.ocultar-titulo{
+  visibility: hidden;
+}
+
+@media (min-width:992px) {
+
+  .formulario-busqueda {
+    width: 50%;
+  }
+
+  .navbar-collapse {
+    background-color: #0e0f0f;
+    padding: 1em;
+  }
+
+  .navbar-collapse ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1em;
+    min-width: 60%;
+  }
+
+  .navbar-collapse ul li {
+    margin-right: 1em;
+  }
+
+  .logo-nombre {
+    margin-bottom: 0;
+  }
+
+  .ocultar-form{
+    visibility: hidden;
+  }
+  
+}
+
+/*---------------INICIO MODAL----------------*/
+
+.nav-link {
+  cursor: pointer;
+  color: white;
+  border-right: 0.3em solid #5e17eb;
+  text-decoration: none;
   /* border: 1px solid red; */
 }
-.iniciar-sesion {
-  border-right: 3px solid #5e17eb;
-  margin-right: 10px;
-  padding-right: 10px;
-  cursor: pointer;
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #5e17eb;
 }
-.iniciar-sesion a {
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-}
-.registrarse a {
-  cursor: pointer;
-  color: white;
-  text-decoration: none;
-}
-.form-label {
-  color: #0e0f0f
-}
+
 .modal-backdrop {
   width: 0;
 }
-.boton-logout {
-  border: 0.1em solid #8521c7c2;
+
+.modal-form {
+  background-color: rgba(0, 0, 0, 0.631);
 }
-.boton-logout:hover {
-  background-color: #8521c7b4;
-  color: white;
-}
-.boton-login-ocultar {
+
+.ocultar-elemento {
   display: none;
 }
-.boton-logout-ocultar {
-  display: none;
+
+.modal-content {
+  border: 0.15em solid #8521c7c2;
 }
-.pag-administracion-ocultar {
-  display: none;
-}
-/* .modal-content {
-  border: 3px solid #fc7d2e;
-} */
-#usuario,
-#clave {
-  color: #0e0f0f;
-}
+
 .form-control:hover {
   background-color: whitesmoke;
 }
@@ -98,33 +174,42 @@ nav img {
   color: #5e17eb;
   text-decoration: none;
 }
-.mensaje-usuario {
+
+.mensaje-usuario, .mensaje-contraseña{
   display: none;
 }
-.mensaje-usuario-activo {
+
+.mensaje-usuario-activo, .mensaje-contraseña-activo {
   display: block;
   color: red;
 }
+
 .sin-cuenta p {
   color: #0e0f0f;
 }
+
 #div-clave {
   position: relative;
 }
+
 #div-clave img {
-  width: 22px;
-  position: relative;
+  width: 26px;
+  height: 26px;
+  position: absolute;
   z-index: 50;
-  left: 27rem;
-  bottom: 2rem;
+  right: 10px;
+  top: 39px;
   cursor: pointer;
 }
+
 .mostrar {
   display: block;
 }
+
 .ocultar {
   display: none;
 }
+
 #enviar-login {
   background-color: #5e17eb;
   color: white;
@@ -132,12 +217,15 @@ nav img {
 
 /*---------------------------FIN MODAL----------------------*/
 .dropdownCuentas {
+  background-color: red;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0.5rem;
 }
+
 .dropdownCuentas * {
   box-sizing: border-box;
 }
+
 .selectCuentas {
   background-color: #2a2f3b;
   color: white;
@@ -150,11 +238,13 @@ nav img {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .select-clickedCuentas {
   border: 2px solid #8521c7b4;
   box-shadow: 0 0 0.8em #8521c7c2;
   transition: 0.1s;
 }
+
 .selectCuentas:hover {
   background: #323741;
 }
@@ -168,9 +258,11 @@ nav img {
   border-top: 6px solid #fff;
   transition: 0.5s;
 }
+
 .caret-rotateCuentas {
   transform: rotate(180deg);
 }
+
 .menuCuentas {
   list-style: none;
   padding: 0.2em 0.5em;
@@ -188,35 +280,43 @@ nav img {
   transition: 0.5s;
   z-index: 1;
 }
+
 .menuCuentas li {
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
 }
+
 .menuCuentas li a {
   text-decoration: none;
   color: #9fa5b5;
 }
+
 .menuCuentas li:hover {
   background: #2a2d35;
 }
+
 .active {
   background: #23242a;
 }
+
 .menu-openCuentas {
   display: block;
   opacity: 1;
 }
+
 /* -----------------FIN NAV----------------- */
 
 /* -----------------COMIENZO MAIN----------------- */
 main {
   background-color: #1b1c1d;
 }
+
 #carouselExampleRide {
   border-bottom: 3px solid #2a2f3b;
 }
+
 #caja-marcas {
   height: 18.5rem;
   display: flex;
@@ -224,6 +324,7 @@ main {
   margin-top: 0.6rem;
   /* border: 1px solid red; */
 }
+
 #caja-card-productos {
   background-color: #1b1c1d;
   width: 65%;
@@ -233,14 +334,17 @@ main {
   margin-bottom: 1rem;
   padding-top: 0.5rem;
 }
+
 .dropdown {
   /* border: 1px solid red; */
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0.5rem;
 }
+
 .dropdown * {
   box-sizing: border-box;
 }
+
 .select {
   background-color: #2a2f3b;
   color: white;
@@ -253,15 +357,18 @@ main {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 .select-clicked {
   border: 2px solid #8521c7b4;
   box-shadow: 0 0 0.8em #8521c7c2;
   margin-bottom: 12rem;
   transition: 0.1s;
 }
+
 .select:hover {
   background: #323741;
 }
+
 .caret {
   width: 0;
   height: 0;
@@ -270,9 +377,11 @@ main {
   border-top: 6px solid #fff;
   transition: 0.5s;
 }
+
 .caret-rotate {
   transform: rotate(180deg);
 }
+
 .menu {
   list-style: none;
   padding: 0.2em 0.5em;
@@ -291,29 +400,36 @@ main {
   transition: 0.5s;
   z-index: 1;
 }
+
 .menu li {
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
 }
+
 .menu li:hover {
   background: #2a2d35;
 }
+
 .active {
   background: #23242a;
 }
+
 .menu-open {
   display: block;
   opacity: 1;
 }
+
 /* --------------------------BOTON PRECIOS COMIENZO----------------------------------- */
 .dropdownPrecios {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .dropdownPrecios * {
   box-sizing: border-box;
 }
+
 .selectPrecios {
   color: white;
   display: flex;
@@ -325,12 +441,15 @@ main {
   transition: background 0.3s;
   width: 50%;
 }
+
 .selectPrecios-clicked {
   border-bottom: 2px solid #a832e7;
 }
+
 .selectPrecios:hover {
   background: #2b2f38d8;
 }
+
 .caretPrecios {
   width: 0;
   height: 0;
@@ -339,9 +458,11 @@ main {
   border-top: 6px solid #fff;
   transition: 0.5s;
 }
+
 .caretPrecios-rotate {
   transform: rotate(180deg);
 }
+
 .menuPrecios {
   list-style: none;
   padding: 0.2em 0.5em;
@@ -359,18 +480,22 @@ main {
   transition: 0.5s;
   z-index: 1;
 }
+
 .menuPrecios li {
   padding: 0.7em 0.5em;
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
 }
+
 .menuPrecios li:hover {
   background: #2a2d35;
 }
+
 .active {
   background: #23242a;
 }
+
 .menuPrecios-open {
   display: block;
   opacity: 1;
@@ -390,6 +515,7 @@ main {
   margin-bottom: 1rem;
   z-index: 1;
 }
+
 .novedades {
   width: 100%;
   height: 8rem;
@@ -401,6 +527,7 @@ main {
   -moz-box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 8px 9px -7px rgba(0, 0, 0, 0.75);
 }
+
 /* -----------------FIN MAIN----------------- */
 
 /* -----------------COMIENZO FOOTER----------*/
@@ -412,74 +539,90 @@ footer {
   align-items: center;
   border-top: 3px solid #2a2f3b;
 }
+
 .logo-footer {
   height: 4.5rem;
   /* border: 1px solid red; */
 }
+
 .logo-footer img {
   width: 100%;
   height: 100%;
 }
+
 .contacton-telefono {
   text-align: center;
   color: white;
   /* border: green 1px solid; */
 }
+
 .contacto {
   margin-top: 8px;
 }
+
 .contacto p {
   margin: 0%;
   padding: 0%;
   font-size: 14px;
   transition: 0.2s;
 }
+
 .contacto p:hover {
   color: #5e17eb;
 }
+
 .contacto h6 {
   margin: 0%;
   padding: 0%;
   font-size: 15px;
 }
+
 .telefono p {
   margin: 0%;
   padding: 0%;
   font-size: 14px;
   transition: 0.2s;
 }
+
 .telefono p:hover {
   color: #5e17eb;
 }
+
 .telefono h6 {
   margin: 0%;
   padding: 0%;
   font-size: 15px;
 }
+
 .redes {
   /* border: 1px solid yellow; */
   text-align: center;
   color: white;
   width: 7rem;
 }
+
 .redes h6 {
   margin: 0%;
   padding: 0%;
 }
+
 .iconos-redes {
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   margin-top: 14px;
 }
+
 svg {
   width: 1.2rem;
   height: 1.2rem;
   transition: 0.2s;
 }
+
 svg:hover {
   color: #5e17eb;
 }
+
 /* -----------------FIN FOOTER----------*/
 
 @media (min-width: 320px) and (max-width: 1023px) {
@@ -487,31 +630,26 @@ svg:hover {
     width: 100%;
     height: 10rem;
   }
+
   nav img {
     height: 5rem;
     margin-bottom: 3rem;
     margin-left: 1rem;
     /* border: 1px solid red; */
   }
+
   .busqueda {
     /* border: 1px solid red; */
     position: absolute;
     bottom: 5px;
   }
+
   .busqueda input {
     width: 15rem;
     height: 1.8rem;
     margin-bottom: 0.5rem;
   }
-  .iniciar-sesion {
-    font-size: 13px;
-    margin-bottom: 3rem;
-    margin-right: 5px;
-    padding-right: 5px;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid red; */
-  }
+
   .registrarse {
     font-size: 13px;
     margin-right: 1rem;
@@ -520,6 +658,7 @@ svg:hover {
     align-items: center;
     /* border: 1px solid rgb(0, 174, 255); */
   }
+
   .selectCuentas {
     /* border: 1px solid red; */
     width: 8rem;
@@ -527,11 +666,13 @@ svg:hover {
     font-size: 12.5px;
     margin-bottom: 3rem;
   }
+
   .menuCuentas {
     top: 5rem;
     width: 45%;
     left: 14.2em;
   }
+
   .iniciar-sesion {
     padding-top: 0;
     padding-bottom: 0;
@@ -540,40 +681,201 @@ svg:hover {
   #carouselExampleRide {
     display: none;
   }
+
   #caja-card-productos {
     width: 95%;
     margin: 0 auto;
   }
+
   #caja-marcas {
     height: 7.5rem;
   }
+
   .selectPrecios {
     width: 100%;
   }
+
   .select-clicked {
     margin-bottom: 0;
   }
+
   .menu {
     box-shadow: none;
     padding: 0.3em 0.5em;
     border-bottom: #a832e7 2px solid;
   }
+
   .menuPrecios {
     width: 90%;
     top: 21.5em;
     border-bottom: #a832e7 2px solid;
   }
+
   .menuCuentas li {
     font-size: 14px;
     text-align: center;
   }
+
   .menu li {
     font-size: 14px;
   }
+
   .menuPrecios li {
     font-size: 14px;
   }
+
   .ilustracion-cards {
     padding: 0px;
   }
+}
+
+
+/* ABOUT*/
+
+.cardIzquierda {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 17rem;
+  height: 28rem;
+}
+
+.cardIzquierda img {
+  height: 60%;
+  border-radius: 60%;
+  border: 3px solid #363a43;
+}
+
+.card-title {
+  color: #5e17eb;
+  text-align: center;
+  margin: 1rem;
+}
+
+.card-text {
+  color: white;
+  text-align: center;
+}
+
+
+/* ADMINISTRACIÓN */
+/* ----------------COMIENZO MAIN----------------- */
+
+.administracion #caja-opciones-admi {
+  background-color: #2a2f3b;
+  height: 83vh;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  border-right: 2px solid #14161b;
+}
+.administracion .caja-listado {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.administracion .caja-listado:hover {
+  background: #323741;
+}
+.administracion #caja-contenido-admi {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  width: 60rem;
+}
+.administracion form {
+  margin-bottom: 4rem;
+  /* border: 1px solid rebeccapurple; */
+}
+.administracion fieldset {
+  /* border: 1px solid royalblue; */
+  text-align: center;
+}
+.administracion label {
+  color: white;
+}
+.administracion input {
+  background-color: #2a2f3b;
+  border: 2px solid #323741;
+  width: 10rem;
+  margin-right: 0.5rem;
+  border-radius: 3px;
+  color: white;
+}
+.administracion #addProductoButton {
+  background-color: #323741;
+  padding: 3px 0.5rem 3px 0.5rem;
+  color: white;
+  margin-top: 5px;
+  border: 2px solid #23242a;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.administracion #addProductoButton:hover {
+  border: 2px solid #5e17eb;
+}
+.administracion h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.administracion #lista-productos {
+  /* border: 1px solid darkgreen; */
+  width: 100%;
+}
+.administracion th {
+  text-align: center;
+  color: white;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #323741;
+  /* border: 1px solid darkgreen; */
+}
+.administracion tr {
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+  /* border: 1px solid white; */
+}
+/* td {
+  border: 1px solid white;
+} */
+.administracion .edit {
+  background-color: #323741;
+  padding: 3px 0.5rem 3px 0.5rem;
+  color: white;
+  margin-top: 5px;
+  border: 2px solid #23242a;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.administracion .edit:hover {
+  border: 2px solid #5e17eb;
+  background-color: #323741;
+}
+.administracion .delete {
+  background-color: #323741;
+  padding: 3px 0.5rem 3px 0.5rem;
+  color: white;
+  margin-top: 5px;
+  border: 2px solid #23242a;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+.administracion .delete:hover {
+  border: 2px solid #5e17eb;
+  background-color: #323741;
+}
+
+.administracion .producto-imagen {
+  width: 5rem;
+  height:5rem;
+  /* border: 1px solid red; */
 }

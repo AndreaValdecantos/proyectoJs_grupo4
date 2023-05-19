@@ -1,5 +1,12 @@
-//Javascript de Botones Cuentas en ADMISTRADOR
+usuarioLogueado = JSON.parse(localStorage.getItem('usuario_logueado')) || false
 
+console.log(usuarioLogueado.nombre)
+
+if (!usuarioLogueado || usuarioLogueado.email != 'admin@correo') {
+  window.location.href = 'productos.html'
+} else {
+  
+  //Javascript de Botones Cuentas en ADMISTRADOR
 const dropdownsCuentas = document.querySelectorAll(".dropdownCuentas");
 
 // Bucle a través de todos los elementos .DROPDOWNS
@@ -48,7 +55,7 @@ dropdownsCuentas.forEach((dropdownC) => {
 });
 
 //-----------------------------------------------------------------------------------
-export let productos = [];
+// export let productos = [];
 
 //Obtener los elementos del DOM
 
@@ -60,7 +67,7 @@ const modeloProducto = document.getElementById("modeloProducto");
 const precioProducto = document.getElementById("precioProducto");
 const descripcionProducto = document.getElementById("descripcionProducto");
 const imagenProducto = document.getElementById("imagenProducto");
-export const addProductoButton = document.getElementById("addProductoButton");
+// export const addProductoButton = document.getElementById("addProductoButton");
 
 //Funcion para agregar productos
 
@@ -230,4 +237,5 @@ const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 if (productosLocalStorage) {
   productos = productosLocalStorage;
   mostrarProductos();
+}
 }
