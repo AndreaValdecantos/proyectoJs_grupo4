@@ -141,10 +141,7 @@ nav img {
 }
 /* -----------------FIN NAV----------------- */
 
-body {
-  /* background: #4b0082; */
-  background: linear-gradient(to bottom, #363a43, #5e17eb);
-}
+
 
 .bg {
   background-image: url(./imageregistro/pexels-anete-lusina-4792722.jpg) !important;

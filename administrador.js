@@ -55,7 +55,7 @@ dropdownsCuentas.forEach((dropdownC) => {
 });
 
 //-----------------------------------------------------------------------------------
-// export let productos = [];
+ let productos = [];
 
 //Obtener los elementos del DOM
 
