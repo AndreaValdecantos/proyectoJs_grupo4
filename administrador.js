@@ -62,7 +62,7 @@ if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
 
   //Obtener los elementos del DOM
   let productos = [];
-  export {productos};
+  
 
   const listaProductos = document.getElementById("lista-productos");
   const agregarProductosForm = document.getElementById("agregarProductosForm");
