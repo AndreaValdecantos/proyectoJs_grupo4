@@ -4,7 +4,7 @@ console.log(usuarioLogueado.nombre);
 
 if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
   window.location.href = "productos.html";
-} else {
+ } else {
   //Javascript de Botones Cuentas en ADMISTRADOR
   const dropdownsCuentas = document.querySelectorAll(".dropdownCuentas");
 
@@ -52,11 +52,17 @@ if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
       });
     });
   });
+}
+
 
   //-----------------------------------------------------------------------------------
-  let productos = [];
+  
+    
+  
 
   //Obtener los elementos del DOM
+  let productos = [];
+  export {productos};
 
   const listaProductos = document.getElementById("lista-productos");
   const agregarProductosForm = document.getElementById("agregarProductosForm");
@@ -68,17 +74,6 @@ if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
   const imagenProducto = document.getElementById("imagenProducto");
   const addProductoButton = document.getElementById("addProductoButton");
 
-  // if (addProductoButton) {
-  //   addProductoButton.addEventListener("click", agregarProductosForm);
-  // }
-
-  // if (listaProductos) {
-  //   listaProductos.addEventListener("click", editarButton)
-  // }
-
-  // if (listaProductos) {
-  //   listaProductos.addEventListener("click", eliminarButton)
-  // }
 
   //Funcion para agregar productos
 
@@ -251,5 +246,7 @@ if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
     productos = productosLocalStorage;
     mostrarProductos();
   }
-}
+
+  
+
 
