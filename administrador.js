@@ -54,7 +54,7 @@ if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
   });
 
   //-----------------------------------------------------------------------------------
- let productos = [];
+  let productos = [];
 
   //Obtener los elementos del DOM
 
@@ -66,10 +66,19 @@ if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
   const precioProducto = document.getElementById("precioProducto");
   const descripcionProducto = document.getElementById("descripcionProducto");
   const imagenProducto = document.getElementById("imagenProducto");
-  // export const addProductoButton = document.getElementById("addProductoButton");
+  const addProductoButton = document.getElementById("addProductoButton");
 
+  // if (addProductoButton) {
+  //   addProductoButton.addEventListener("click", agregarProductosForm);
+  // }
 
+  // if (listaProductos) {
+  //   listaProductos.addEventListener("click", editarButton)
+  // }
 
+  // if (listaProductos) {
+  //   listaProductos.addEventListener("click", eliminarButton)
+  // }
 
   //Funcion para agregar productos
 

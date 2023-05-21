@@ -284,5 +284,4 @@ botonLogout.addEventListener("click", () => {
 
 /*-------------------------------------*/
 
-import { productos } from "./administrador.js";
-
+// import { productos } from "./administrador.js";
