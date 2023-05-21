@@ -216,41 +216,43 @@ dropdownsPrecios.forEach((dropdownP) => {
 
 //PARA MOSTRAR LOS BOTONES DE LOGIN/LOGOUT/ADMINISTRACIÓN SEGÚN EL ESTADO DE LA SESIÓN Y EL MENU DESPLEGABLE DE SESIÓN INICIADA
 
-let usuarioLogueado = JSON.parse(localStorage.getItem('usuario_logueado')) || false
-let botonLogin = document.getElementById('boton-login')
-let botonLogout = document.getElementById('boton-logout')
-let botonRegistro = document.getElementById('boton-registro')
-let paginaAdministracion = document.getElementById('pagina-administracion')
-let hamburguesa = document.getElementById('hamburguesa')
-let nombreUsuarioLogueado = document.getElementById('nombre-usuario-logueado')
+let usuarioLogueado =
+  JSON.parse(localStorage.getItem("usuario_logueado")) || false;
+let botonLogin = document.getElementById("boton-login");
+let botonLogout = document.getElementById("boton-logout");
+let botonRegistro = document.getElementById("boton-registro");
+let paginaAdministracion = document.getElementById("pagina-administracion");
+let hamburguesa = document.getElementById("hamburguesa");
+let nombreUsuarioLogueado = document.getElementById("nombre-usuario-logueado");
 
-
-if (!usuarioLogueado) { //no logueado
-  botonLogout.classList.add('ocultar-elemento')
-  paginaAdministracion.classList.add('ocultar-elemento')
-  botonLogin.classList.remove('ocultar-elemento')
-  hamburguesa.classList.remove('ocultar-elemento')
-  nombreUsuarioLogueado.classList.add('ocultar-elemento')
-} else { //logueado
-  nombreUsuarioLogueado.innerHTML = usuarioLogueado.nombre
-  hamburguesa.classList.add('ocultar-elemento')
-  nombreUsuarioLogueado.classList.remove('ocultar-elemento')
-  botonLogin.classList.add('ocultar-elemento')
-  botonRegistro.classList.add('ocultar-elemento')
-  botonLogout.classList.remove('ocultar-elemento')
-  if (usuarioLogueado.email == 'admin@correo') {
-    paginaAdministracion.classList.remove('ocultar-elemento')
+if (!usuarioLogueado) {
+  //no logueado
+  botonLogout.classList.add("ocultar-elemento");
+  paginaAdministracion.classList.add("ocultar-elemento");
+  botonLogin.classList.remove("ocultar-elemento");
+  hamburguesa.classList.remove("ocultar-elemento");
+  nombreUsuarioLogueado.classList.add("ocultar-elemento");
+} else {
+  //logueado
+  nombreUsuarioLogueado.innerHTML = usuarioLogueado.nombre;
+  hamburguesa.classList.add("ocultar-elemento");
+  nombreUsuarioLogueado.classList.remove("ocultar-elemento");
+  botonLogin.classList.add("ocultar-elemento");
+  botonRegistro.classList.add("ocultar-elemento");
+  botonLogout.classList.remove("ocultar-elemento");
+  if (usuarioLogueado.email == "admin@correo") {
+    paginaAdministracion.classList.remove("ocultar-elemento");
   } else {
-    paginaAdministracion.classList.add('ocultar-elemento')
+    paginaAdministracion.classList.add("ocultar-elemento");
   }
 }
 
 //LOGOUT
 
-botonLogout.addEventListener('click', () => {
-  localStorage.removeItem('usuario_logueado')
-  window.location.href = 'productos.html'
-})
+botonLogout.addEventListener("click", () => {
+  localStorage.removeItem("usuario_logueado");
+  window.location.href = "productos.html";
+});
 
 // //REGISTRO
 
@@ -279,3 +281,8 @@ botonLogout.addEventListener('click', () => {
 
 //     formularioRegistro.reset()
 //   })
+
+/*-------------------------------------*/
+
+import { productos } from "./administrador.js";
+
