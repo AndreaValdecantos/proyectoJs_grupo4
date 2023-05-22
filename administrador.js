@@ -231,8 +231,8 @@ const mostrarProductos = () => {
 function uuidv4() {
   return crypto.randomUUID();
 }
-// obtener los productos del local storage
 
+// obtener los productos del local storage
 function cargarLocalStorage() {
   const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
   console.log(productosLocalStorage);
@@ -241,7 +241,7 @@ function cargarLocalStorage() {
     mostrarProductos();
   }
 }
-cargarLocalStorage()
+cargarLocalStorage();
 
 // function actualizarLocalStorage() {
 //   let jsonAGuardar = JSON.stringify(productos);
