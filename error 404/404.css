@@ -138,6 +138,7 @@ body {
     font: 14.5em/1 Open Sans, Impact;
     text-transform: uppercase;
     margin: 0;
+    background-repeat: no-repeat;
 
 }
 
@@ -172,12 +173,12 @@ p {
 .footer1 {
     height: 1rem;
     background-color: #0e0f0f;
-    padding-top: 0.5rem;
+    padding-top: 0.1em;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #2a2f3b;
     position: sticky;
-    top: 0%;
-    z-index: 1;
+    top: 100%;
+    z-index: 15rem;
 height: 100%;
     width: 100%; 
       display: flex;
@@ -192,6 +193,22 @@ height: 100%;
 
 footer img {
     height: 1%;
-    width: 10rem;
+    width: 7rem;
+
 
 }
+
+
+a {
+    width: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 1px;
+    color: #ffffff;
+    display: block;
+    border-right: 3px solid #5e17eb;
+   
+
+}
+
