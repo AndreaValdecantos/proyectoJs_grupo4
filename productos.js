@@ -297,9 +297,6 @@ cargarLocalStorage();
 
 function crearCards() {
   const ilustrarCards = document.querySelector(".ilustracion-cards");
-  // let card = document.createElement("div");
-  // card.className = "novedades";
-  // card.innerHTML = JSON.stringify(productos);
   productos.forEach((producto) => {
     let card = document.createElement("div");
     card.className = "novedades";
