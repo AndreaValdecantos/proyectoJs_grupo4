@@ -299,7 +299,7 @@ function crearCards() {
   const ilustrarCards = document.querySelector(".ilustracion-cards");
   productos.forEach((producto) => {
     let card = document.createElement("div");
-    card.className = "novedades";
+    card.className = `novedades ${producto.tipo} ${producto.marca.split(' ').join('')}`;
     card.innerHTML = `
     <div id="columna-imagen-card">
     <img src="${producto.imagen}" alt="Imagen de Producto">
@@ -320,3 +320,88 @@ function crearCards() {
   });
 }
 crearCards();
+
+let botonFiltroTeclados = document.getElementById('teclados')
+let botonFiltroAuriculares = document.getElementById('auriculares')
+let botonFiltroMouse = document.getElementById('mouse')
+let botonFiltroLogitech = document.getElementById('productosLogitech')
+let botonFiltroRedDragon = document.getElementById('productosRedDragon')
+let botonFiltroHyperex = document.getElementById('Hyperex')
+let tarjetaProducto = document.getElementsByClassName('novedades')
+let arrayTarjetas = Array.from(tarjetaProducto)
+
+botonFiltroTeclados.addEventListener('click', (e) =>{
+  e.preventDefault()
+
+  arrayTarjetas.forEach((tarjeta) =>{
+    if(tarjeta.classList.contains('mouse') || tarjeta.classList.contains('auriculares')){
+      tarjeta.classList.add('ocultar-elemento')
+    } else {
+      tarjeta.classList.remove('ocultar-elemento')
+    }
+  })
+  
+})
+
+botonFiltroMouse.addEventListener('click', (e) =>{
+  e.preventDefault()
+
+  arrayTarjetas.forEach((tarjeta) =>{
+    if(tarjeta.classList.contains('teclado') || tarjeta.classList.contains('auriculares')){
+      tarjeta.classList.add('ocultar-elemento')
+    } else {
+      tarjeta.classList.remove('ocultar-elemento')
+    }
+  })
+  
+})
+
+botonFiltroAuriculares.addEventListener('click', (e) =>{
+  e.preventDefault()
+
+  arrayTarjetas.forEach((tarjeta) =>{
+    if(tarjeta.classList.contains('teclado') || tarjeta.classList.contains('mouse')){
+      tarjeta.classList.add('ocultar-elemento')
+    } else {
+      tarjeta.classList.remove('ocultar-elemento')
+    }
+  })
+  
+})
+
+botonFiltroLogitech.addEventListener('click', (e) =>{
+  e.preventDefault()
+
+  arrayTarjetas.forEach((tarjeta) =>{
+    if(tarjeta.classList.contains('RedDragon') || tarjeta.classList.contains('Hyperex')){
+      tarjeta.classList.add('ocultar-elemento')
+    } else {
+      tarjeta.classList.remove('ocultar-elemento')
+    }
+  })
+  
+})
+botonFiltroHyperex.addEventListener('click', (e) =>{
+  e.preventDefault()
+
+  arrayTarjetas.forEach((tarjeta) =>{
+    if(tarjeta.classList.contains('RedDragon') || tarjeta.classList.contains('Logitech')){
+      tarjeta.classList.add('ocultar-elemento')
+    } else {
+      tarjeta.classList.remove('ocultar-elemento')
+    }
+  })
+  
+})
+botonFiltroRedDragon.addEventListener('click', (e) =>{
+  e.preventDefault()
+
+  arrayTarjetas.forEach((tarjeta) =>{
+    if(tarjeta.classList.contains('Hyperex') || tarjeta.classList.contains('Logitech')){
+      tarjeta.classList.add('ocultar-elemento')
+    } else {
+      tarjeta.classList.remove('ocultar-elemento')
+    }
+  })
+  
+})
