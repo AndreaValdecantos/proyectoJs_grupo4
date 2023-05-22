@@ -18,78 +18,84 @@
                 <div class="logo-nombre logo-nombre-ocultar">
                     <a class="navbar-brand" href="productos.html"><img src="./image-main/logofinal.png" alt="logo"></a>
                     <h3 class="ocultar-titulo">Registro</h3>
-                  </div>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" id="hamburguesa"></span>
-                <span class="menu-usuario" id="nombre-usuario-logueado"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                
-                <form class="d-flex formulario-busqueda" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn boton-buscar" type="submit">Buscar</button>
-                </form>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" id="hamburguesa"></span>
+                    <span class="menu-usuario" id="nombre-usuario-logueado"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item" id="boton-login">
-                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar sesión</a>
-                  </li>
-                  <li class="nav-item" id="pagina-administracion">
-                    <a class="nav-link" href="administrador.html">Administración</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./about.html">Nosotros</a>
-                  </li>
-                  <li class="nav-item" id="boton-registro">
-                    <a class="nav-link" href="./registro.html">Registrarse</a>
-                  </li>
-                  <li class="nav-item" id="boton-logout">
-                    <a class="nav-link" style="border-right: none;">Cerrar sesion</a>
-                  </li>
-                </ul>
+                    <form class="d-flex formulario-busqueda" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn boton-buscar" type="submit">Buscar</button>
+                    </form>
 
-                <div class="modal fade modal-form" id="staticBackdrop" data-bs-backdrop="static"
-                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5 modal-titulo" id="exampleModalLabel">Inicio de sesión</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                    id="cerrar-modal"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form id="formulario-login" class="formulario-login" autocomplete="off">
-                                    <div class="mb-3" id="div-email">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" name="email" id="email"
-                                            aria-describedby="emailHelp" required>
-                                    </div>
-                                    <div class="mb-3" id="div-clave">
-                                        <label for="clave" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" name="clave" id="clave" required>
-                                        <img src="imgLogin/mostrarClave.png" alt="mostrar contraseña"
-                                            id="mostrar-clave">
-                                        <img src="imgLogin/ocultarClave.png" alt="ocultar contraseña" id="ocultar-clave"
-                                            class="ocultar">
-                                    </div>
-                                    <div class="sin-cuenta">
-                                        <p>¿No tienes una cuenta? <a href="./registro.html" class="link-registro">Registrarse</a></p>
-                                    </div>
-                                    <p class="mensaje-usuario">Usuario y/o contraseña incorrectos</p>
-                                    <div class="row justify-content-center p-2">
-                                        <button type="submit" class="btn boton-login col-5"
-                                            id="enviar-login">Ingresar
-                                        </button>
-                                    </div>
-                                </form>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item" id="boton-login">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar
+                                sesión</a>
+                        </li>
+                        <li class="nav-item" id="pagina-administracion">
+                            <a class="nav-link" href="administrador.html">Administración</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item" id="boton-registro">
+                            <a class="nav-link" href="./registro.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item" id="boton-logout">
+                            <a class="nav-link" style="border-right: none;">Cerrar sesion</a>
+                        </li>
+                    </ul>
+
+                    <div class="modal fade modal-form" id="staticBackdrop" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 modal-titulo" id="exampleModalLabel">Inicio de sesión
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        id="cerrar-modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="formulario-login" class="formulario-login" autocomplete="off">
+                                        <div class="mb-3" id="div-email">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                aria-describedby="emailHelp" required>
+                                        </div>
+                                        <div class="mb-3" id="div-clave">
+                                            <label for="clave" class="form-label">Contraseña</label>
+                                            <input type="password" class="form-control" name="clave" id="clave"
+                                                required>
+                                            <img src="imgLogin/mostrarClave.png" alt="mostrar contraseña"
+                                                id="mostrar-clave">
+                                            <img src="imgLogin/ocultarClave.png" alt="ocultar contraseña"
+                                                id="ocultar-clave" class="ocultar">
+                                        </div>
+                                        <div class="sin-cuenta">
+                                            <p>¿No tienes una cuenta? <a href="./registro.html"
+                                                    class="link-registro">Registrarse</a></p>
+                                        </div>
+                                        <p class="mensaje-usuario">Usuario y/o contraseña incorrectos</p>
+                                        <div class="row justify-content-center p-2">
+                                            <button type="submit" class="btn boton-login col-5"
+                                                id="enviar-login">Ingresar
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <main>
@@ -155,7 +161,7 @@
                     </div>
                     <div class="ilustracion-cards">
                         <h4 class="titulos-novedades">Novedades</h4>
-                        <div class="novedades">
+                        <!-- <div class="novedades">
 
                         </div>
                         <div class="novedades">
@@ -166,7 +172,7 @@
                         </div>
                         <div class="novedades">
 
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>

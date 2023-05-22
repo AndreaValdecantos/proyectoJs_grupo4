@@ -776,7 +776,8 @@ svg:hover {
   }
   .navbar-toggler {
     position: absolute;
-    top: 0 !important;
+    top: 3rem !important;
+    right: 0;
   }
 }
 
@@ -966,4 +967,25 @@ svg:hover {
   width: 5rem;
   height: 5rem;
   /* border: 1px solid red; */
+}
+
+/* -----------REGISTRO------------ */
+
+.rounded-end {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+.text-end {
+  height: 5rem;
+  /* border: 1px solid red; */
+  text-align: center !important;
+}
+.text-end img {
+  height: 100%;
+}
+@media (min-width:320px) and (max-width:1023px) {
+   .body-registro {
+    padding: 0%;
+   }
 }

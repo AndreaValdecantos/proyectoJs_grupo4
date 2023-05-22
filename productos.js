@@ -1,3 +1,4 @@
+let productos = [];
 // Javascript de MODAL LOGIN
 // //TODO EL LOGIN DEL USUARIO
 
@@ -284,4 +285,29 @@ botonLogout.addEventListener("click", () => {
 
 /*-------------------------------------*/
 
-// import { productos } from "./administrador.js";
+function cargarLocalStorage() {
+  const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
+  console.log(productosLocalStorage);
+  if (productosLocalStorage) {
+    productos = productosLocalStorage;
+    // mostrarProductos();
+  }
+}
+cargarLocalStorage();
+
+function crearCards() {
+  const ilustrarCards = document.querySelector(".ilustracion-cards");
+  // let card = document.createElement("div");
+  // card.className = "novedades";
+  // card.innerHTML = JSON.stringify(productos);
+  productos.forEach((producto) => {
+    let card = document.createElement("div");
+    card.className = "novedades";
+    card.innerHTML = `
+    <h5>${producto.tipo} ${producto.marca} ${producto.modelo}</h5>
+    <img src="${producto.imagen}" alt="Imagen de Producto" class="">
+    `;
+    ilustrarCards.appendChild(card);
+  });
+}
+crearCards();
