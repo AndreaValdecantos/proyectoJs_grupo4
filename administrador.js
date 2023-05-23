@@ -84,6 +84,11 @@ function agregarProductoTabla(e) {
   const mode = agregarProductosForm.dataset.mode; // dataset es un objeto que contiene todos los atributos de un elemento
   const editId = agregarProductosForm.dataset.editId;
 
+  if (tipo !== "" && marca !== "" && modelo !== "" && precio !== "" && descripcion !== "" && imagen !== "" ) {
+    
+  
+
+
   if (mode === "add") {
     const id = uuidv4();
     const producto = { id, tipo, marca, modelo, precio, descripcion, imagen };
@@ -103,6 +108,17 @@ function agregarProductoTabla(e) {
 
   //Limpiar el formulario
   agregarProductosForm.reset();
+} else {
+  Swal.fire({
+    title: 'COMPLETA TODOS LOS CAMPOS PARA AGREGAR UN PRODUCTO',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
+}
   agregarProductosForm.dataset.mode = "add";
   addProductoButton.textContent = "Agregar";
 
