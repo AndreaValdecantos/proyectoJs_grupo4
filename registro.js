@@ -30,8 +30,17 @@ formularioRegistro.addEventListener('submit', (e) => {
     if (nombre.value != "" && email.value != "" && clave.value != "" && clave.value === confirmarcontraseña.value) {
       usuarios.push({ nombre: nombre.value, email: email.value, clave: clave.value })
       localStorage.setItem('usuarios', JSON.stringify(usuarios))
-      alert("Registro exitoso")
-      document.location.href = 'productos.html'
+      // alert("Registro exitoso")
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Te has registrado con exito',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setTimeout(() => {
+        document.location.href = 'productos.html';
+      }, "1000");
       formularioRegistro.reset()
     } else {
       document.querySelector("#formulario-registro .mensaje-contraseña").classList.add("mensaje-contraseña-activo")

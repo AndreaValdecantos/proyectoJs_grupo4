@@ -86,9 +86,6 @@ function agregarProductoTabla(e) {
 
   if (tipo !== "" && marca !== "" && modelo !== "" && precio !== "" && descripcion !== "" && imagen !== "" ) {
     
-  
-
-
   if (mode === "add") {
     const id = uuidv4();
     const producto = { id, tipo, marca, modelo, precio, descripcion, imagen };
@@ -110,17 +107,22 @@ function agregarProductoTabla(e) {
   agregarProductosForm.reset();
 } else {
   Swal.fire({
-    title: 'COMPLETA TODOS LOS CAMPOS PARA AGREGAR UN PRODUCTO',
-    showClass: {
-      popup: 'animate__animated animate__fadeInDown'
-    },
-    hideClass: {
-      popup: 'animate__animated animate__fadeOutUp'
-    }
+    icon: 'error',
+    title: '<h5>Error</h5>',
+    text: 'COMPLETA TODOS LOS CAMPOS PARA AGREGAR UN PRODUCTO',
+    footer: '<h6>No se pudo agregar el producto</h6>'
   })
 }
   agregarProductosForm.dataset.mode = "add";
   addProductoButton.textContent = "Agregar";
+
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Producto agregado',
+    showConfirmButton: false,
+    timer: 1500
+  })
 
   //llamar a una funcion que actualiza la lista de productos
   mostrarProductos();
@@ -154,11 +156,10 @@ listaProductos.addEventListener("click", (e) => {
 });
 
 // Funcion para eliminar productos
-
 listaProductos.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     Swal.fire({
-      title: "¿Desea eliminar este producto?",
+      title: "¿Desea eliminar el producto?",
       text: "¡No podrás revertir esto!",
       icon: "warning",
       showCancelButton: true,
@@ -175,7 +176,7 @@ listaProductos.addEventListener("click", (e) => {
         }
         Swal.fire(
           "Eliminado!",
-          "Su archivo ha sido eliminado con exito.",
+          "Su producto ha sido eliminado con exito.",
           "success"
         );
       }
