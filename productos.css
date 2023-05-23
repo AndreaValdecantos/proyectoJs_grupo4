@@ -699,7 +699,7 @@ svg:hover {
     width: 50%;
     height: 5rem !important;
     justify-content: center;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   .logo-nombre a {
     border-right: none;
@@ -898,7 +898,6 @@ svg:hover {
 
 .administracion #caja-opciones-admi {
   background-color: #2a2f3b;
-  height: 100vh;
   width: 20rem;
   display: flex;
   flex-direction: column;
