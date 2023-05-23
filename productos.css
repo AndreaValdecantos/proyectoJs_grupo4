@@ -669,13 +669,16 @@ footer {
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
-  margin-top: 14px;
+  align-items: center;
+  margin-top: 5px;
 }
 
 svg {
   width: 1.2rem;
   height: 1.2rem;
   transition: 0.2s;
+  color: white;
+  
 }
 
 svg:hover {
@@ -854,6 +857,7 @@ svg:hover {
   width: 90%;
   height: 11rem;
   border-radius: 60%;
+  /* border: 1px solid red; */
 }
 .card-body {
   /* border: 1px solid blue; */
