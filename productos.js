@@ -307,7 +307,7 @@ function crearCards() {
     <img src="${producto.imagen}" alt="Imagen de Producto">
     </div>
     <div id="texto-card-producto">
-    <h4>${producto.tipo} ${producto.marca} ${producto.modelo}</h4>
+    <h4 class="nombre-producto-card">${producto.tipo} ${producto.marca} ${producto.modelo}</h4>
     <h6>${producto.descripcion}</h6>
     <h5 class="precio-producto">$${producto.precio}</h5>
     </div>
@@ -322,7 +322,9 @@ function crearCards() {
   });
 }
 crearCards();
+// -----------------------FILTROS--------------------------------------------
 
+//Filtro de Marcas Y Productos
 let botonFiltroTeclados = document.getElementById("teclados");
 let botonFiltroAuriculares = document.getElementById("auriculares");
 let botonFiltroMouse = document.getElementById("mouse");
@@ -421,14 +423,21 @@ botonFiltroRedDragon.addEventListener("click", (e) => {
 });
 
 /*************************************/
-const formularioBusqueda = document.querySelector("#formulario-busqueda input");
-formularioBusqueda.addEventListener("keyup", (e) => {
-  const valorInput = formularioBusqueda.value;
-  arrayTarjetas.forEach((tarjeta) => {
-    if (valorInput == "mouse" || valorInput == "auriculares") {
-      tarjeta.classList.add("ocultar-elemento");
-    } else {
-      tarjeta.classList.remove("ocultar-elemento");
-    }
-  });
+
+//Filtro buscador input
+const formularioBusqueda = document.getElementById("buscador-nav");
+formularioBusqueda.addEventListener((type = "keyup"), (e) => {
+  if (e.target.matches("#buscador-nav")) {
+    arrayTarjetas.forEach((tarjeta) => {
+      if (
+        tarjeta.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+      ) {
+        tarjeta.classList.remove("ocultar-elemento");
+      } else {
+        tarjeta.classList.add("ocultar-elemento");
+        
+      }
+    });
+  }
 });
+
