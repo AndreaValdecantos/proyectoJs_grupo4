@@ -43,6 +43,7 @@ nav {
 }
 
 .navbar-collapse {
+  /* border: 1px solid red; */
   background-color: #0e0f0f;
   padding: 0% !important;
   margin: 0% !important;
@@ -176,7 +177,7 @@ nav {
 
 .link-registro,
 .modal-titulo {
-  color: #5e17eb;
+  color: #fc6e16;
   text-decoration: none;
 }
 
@@ -192,13 +193,17 @@ nav {
 }
 
 .sin-cuenta p {
-  color: #0e0f0f;
+  color: white;
 }
-
+#div-email .form-label {
+  color: white;
+}
 #div-clave {
   position: relative;
 }
-
+#div-clave .form-label {
+  color: white;
+}
 #div-clave img {
   width: 26px;
   height: 26px;
@@ -732,7 +737,18 @@ svg:hover {
     align-items: center;
     /* border: 1px solid rgb(0, 174, 255); */
   }
-
+  .navbar-collapse {
+    position: absolute;
+    top: 7.2rem;
+    right: 0.5rem;
+    width: 95%;
+  }
+  .navbar-collapse ul li a {
+    border-right: none;
+  }
+  .navbar-collapse .form-control {
+    width: 100% !important;
+  }
   .selectCuentas {
     /* border: 1px solid red; */
     width: 8rem;
@@ -826,8 +842,8 @@ svg:hover {
   }
   .navbar-toggler {
     position: absolute;
-    top: 3rem !important;
-    right: 0;
+    top: 2rem !important;
+    right: 1rem;
   }
   #columna-imagen-card {
     width: 40%;
@@ -912,7 +928,21 @@ svg:hover {
   color: #5e17eb;
 }
 #exampleModalLabel {
-  color: black;
+  color: white;
+}
+.modal-header {
+  border-bottom: 2px solid #5e17eb;
+}
+.modal-content {
+  background-color: #1f2124 !important;
+  border: 1px solid #363a43;
+}
+.modal-footer {
+  border-top: 2px solid #5e17eb;
+}
+.modal-footer .btn {
+  background-color: #5e17eb;
+  color: white;
 }
 
 /* ADMINISTRACIÓN */
