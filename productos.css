@@ -763,7 +763,7 @@ svg:hover {
   }
 
   #caja-marcas {
-    height: 7.5rem;
+    height: 11rem;
   }
 
   .selectPrecios {
@@ -782,7 +782,7 @@ svg:hover {
 
   .menuPrecios {
     width: 90% !important;
-    top: 22.2rem !important;
+    top: 25.6rem !important;
     border-bottom: #a832e7 2px solid;
   }
 
@@ -828,6 +828,21 @@ svg:hover {
     position: absolute;
     top: 3rem !important;
     right: 0;
+  }
+  #columna-imagen-card {
+    width: 40%;
+  }
+  #texto-card-producto h4 {
+    font-size: 15px;
+  }
+  #texto-card-producto h6 {
+    font-size: 13px;
+  }
+  #texto-card-producto h5 {
+    font-size: 16px;
+  }
+  #ver-mas-card a {
+   text-align: center;
   }
 }
 
@@ -895,6 +910,9 @@ svg:hover {
 .de-ver-mas:hover {
   background-color: white;
   color: #5e17eb;
+}
+#exampleModalLabel {
+  color: black;
 }
 
 /* ADMINISTRACIÓN */
@@ -1038,4 +1056,10 @@ svg:hover {
    .body-registro {
     padding: 0%;
    }
+}
+/*----------------------------------------------*/
+#boton-favoritos {
+  background-color: #5e17eb;
+  color: white;
+  margin-top: 1rem;
 }

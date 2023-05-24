@@ -249,12 +249,10 @@ if (!usuarioLogueado) {
 }
 
 //LOGOUT
-
 botonLogout.addEventListener("click", () => {
   localStorage.removeItem("usuario_logueado");
   window.location.href = "productos.html";
 });
-
 // //REGISTRO
 
 //   const formularioRegistro = document.getElementById('formulario-registro')
@@ -290,7 +288,6 @@ function cargarLocalStorage() {
   console.log(productosLocalStorage);
   if (productosLocalStorage) {
     productos = productosLocalStorage;
-    // mostrarProductos();
   }
 }
 cargarLocalStorage();
@@ -313,7 +310,7 @@ function crearCards() {
     </div>
     <div id="ver-mas-card">
     <a href="./error 404/error404.html">Ver mas</a>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" class="corazonFavorito" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
   <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
 </svg>
     </div>
@@ -430,14 +427,16 @@ formularioBusqueda.addEventListener((type = "keyup"), (e) => {
   if (e.target.matches("#buscador-nav")) {
     arrayTarjetas.forEach((tarjeta) => {
       if (
-        tarjeta.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+        tarjeta.textContent
+          .toLocaleLowerCase()
+          .includes(e.target.value.toLocaleLowerCase())
       ) {
         tarjeta.classList.remove("ocultar-elemento");
       } else {
         tarjeta.classList.add("ocultar-elemento");
-        
       }
     });
   }
 });
 
+/*************************************/

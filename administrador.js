@@ -102,7 +102,13 @@ function agregarProductoTabla(e) {
       producto.imagen = imagen;
     }
   }
-
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Producto agregado',
+    showConfirmButton: false,
+    timer: 1500
+  })
   //Limpiar el formulario
   agregarProductosForm.reset();
 } else {
@@ -116,13 +122,7 @@ function agregarProductoTabla(e) {
   agregarProductosForm.dataset.mode = "add";
   addProductoButton.textContent = "Agregar";
 
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Producto agregado',
-    showConfirmButton: false,
-    timer: 1500
-  })
+  
 
   //llamar a una funcion que actualiza la lista de productos
   mostrarProductos();
