@@ -93,32 +93,36 @@
   <main class="body-registro">
     <div class="container rounded shadow">
       <div class="row">
-        <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
+        <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded foto-de-registro">
 
         </div>
-        <div class="col p-4 rounded-end">
-          <div class="text-end">
+        <div class="col p-4 rounded-end registro-input">
+          <!-- <div class="text-end">
             <img src="./imageregistro/WhatsApp Image 2023-05-11 at 22.20.39.jpeg" alt="">
-          </div>
+          </div> -->
           <h2 class=" fw-bold text-center pt-5 py-5">BIENVENIDO A PRODIGY PC</h2>
 
           <!-- REGISTRARME-->
           <form id="formulario-registro" autocomplete="off">
             <div class="mb-4">
               <label for="nombre" class="form-label">Nombre:</label>
-              <input type="text" id="nombre" class="form-control" name="nombre" required pattern="[A-Za-z]+"  minlength="4" maxlength="12">
+              <input type="text" id="nombre" class="form-control" name="nombre" required pattern="[A-Za-z]+"
+                minlength="3" maxlength="15">
             </div>
             <div class="mb-4">
               <label for="email" class="form-label">Correo electrónico:</label>
-              <input type="email" id="email-registro" class="form-control" name="email" required>
+              <input type="email" id="email-registro" class="form-control" name="email" required
+                pattern="[a-zA-Z0-9]([^ @&%$\/()=?¿!.,:;]?|\d?)+[a-zA-Z0-9][.]){1,2}" minlength="13" maxlength="50">
             </div>
             <div class="mb-4">
               <label for="clave" class="form-label">Contraseña:</label>
-              <input type="password" id="contraseña" class="form-control" name="clave" required>
+              <input type="password" id="contraseña" class="form-control" name="clave" required
+                pattern="(?=^.{8,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[AZ])(? =.[az]).*$" minlength="4" maxlength="12">
             </div>
             <div class="mb-4">
               <label for="confirmarcontraseña" class="form-label">Confirmar contraseña:</label>
-              <input type="password" id="confirmarcontraseña" class="form-control" name="confirmarcontraseña" required>
+              <input type="password" id="confirmarcontraseña" class="form-control" name="confirmarcontraseña" required
+                pattern="(?=^.{8,}$)((?=.\d)|(?=.\W+))(?![.\n])(?=.[AZ])(? =.[az]).*$" minlength="4" maxlength="12">
             </div>
             <p class="mensaje-contraseña">Las contraseñas no coinciden</p>
 
@@ -176,4 +180,5 @@
 <script src="./registro.js"></script>
 <script src="./login.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </html>
