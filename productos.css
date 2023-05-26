@@ -568,13 +568,13 @@ main {
 }
 #texto-card-producto h4:hover {
   color: #fc6e16;
-} 
+}
 #ver-mas-card {
- /* border: 1px solid blue; */
- display: flex;
- align-items: center;
- flex-direction: column;
- justify-content: center;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 2rem;
 }
 #ver-mas-card a {
@@ -587,8 +587,8 @@ main {
   margin-bottom: 1rem;
 }
 #ver-mas-card a:hover {
- background-color:#fc6e16;
- color: white;
+  background-color: #fc6e16;
+  color: white;
 }
 /* -----------------FIN MAIN----------------- */
 
@@ -682,7 +682,6 @@ svg {
   height: 1.2rem;
   transition: 0.2s;
   color: white;
-  
 }
 
 svg:hover {
@@ -717,7 +716,7 @@ svg:hover {
   .logo-nombre img {
     height: 100%;
   }
- 
+
   .busqueda {
     /* border: 1px solid red; */
     position: absolute;
@@ -849,23 +848,124 @@ svg:hover {
   #columna-imagen-card {
     width: 40%;
   }
+  .novedades {
+    height: 6.2rem;
+  }
   #texto-card-producto h4 {
-    font-size: 15px;
+    font-size: 12.5px;
   }
   #texto-card-producto h6 {
-    font-size: 13px;
+    font-size: 11px;
   }
   #texto-card-producto h5 {
-    font-size: 16px;
+    font-size: 13.5px;
   }
   #ver-mas-card a {
-   text-align: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 0;
+    margin-right: 3px;
+    width: 4rem;
   }
   .titulos-novedades {
     text-align: center;
   }
+  /*****************************************************/
+  #caja-opciones-admi {
+    display: none !important;
+  }
+ 
+  #caja-contenido-admi {
+    /* border: 1px solid rgb(11, 112, 19); */
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  #agregarProductosForm {
+    width: 95%;
+    /* border: 1px solid red; */
+  }
+  fieldset {
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  fieldset input {
+    margin-bottom: 5px;
+    width: 95% !important;
+  }
+  /* #lista-productos {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+  }
+  #lista-productos tr {
+    border-bottom: 1px solid rgb(151, 15, 144);
+    padding-bottom: 5px;
+    width: 100% !important;
+    font-size: 11px;
+  }
+  #lista-productos th {
+    border: 1px solid rgb(168, 144, 38);
+    font-size: 12px;
+    width: 100% !important;
+    padding: 0 2.5px 0 2.5px !important;
+  }
+  tbody {
+    display: flex;
+    flex-direction: column !important;
+  }
+  #lista-productos td {
+    border: 1px solid white;
+    padding: 0 2px 0 5px;
+    font-size: 12px;
+  }
+  .producto-imagen {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .edit, .delete {
+    width: 3rem !important;
+    height: 2rem !important;
+    padding: 0 !important;
+    font-size: 11px;
+  }
+  .acciones-para-r {
+    display: none;
+  } */
+  #lista-productos thead {
+    display: none;
+  }
+  #lista-productos tr {
+    margin-bottom: 8px !important;
+    border-bottom: #5e17eb solid 2px !important;
+    display: block;
+  }
+  #lista-productos th,
+  #lista-productos td {
+    font-size: 13px;
+  }
+  #lista-productos td {
+    display: block;
+    border-bottom: 1px solid #2a2d35;
+    margin-top: 1rem;
+    text-align: right;
+  }
+  .producto-imagen {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    text-align: center !important;
+  }
+ 
+  #lista-productos td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    float: left;
+  }
 }
-
 
 /* ABOUT*/
 
@@ -1078,8 +1178,8 @@ svg:hover {
   /* border: 1px solid red; */
 }
 .body-registro {
-  padding:1%;
- }
+  padding: 1%;
+}
 .text-end {
   height: 3rem;
   /* border: 1px solid red; */
@@ -1099,10 +1199,10 @@ svg:hover {
 .registro-input {
   height: 30rem;
 } */
-@media (min-width:320px) and (max-width:1023px) {
-   .body-registro {
+@media (min-width: 320px) and (max-width: 1023px) {
+  .body-registro {
     padding: 0%;
-   }
+  }
 }
 /*----------------------------------------------*/
 #boton-favoritos {

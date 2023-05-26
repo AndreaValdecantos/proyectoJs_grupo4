@@ -84,7 +84,7 @@ function agregarProductoTabla(e) {
   const mode = agregarProductosForm.dataset.mode; // dataset es un objeto que contiene todos los atributos de un elemento
   const editId = agregarProductosForm.dataset.editId;
 
-  if (tipo !== "" && tipo.length > 5 && marca !== "" && marca.length > 7 && modelo !== "" && precio !== "" && precio > 0 && descripcion !== "" && imagen !== "" ) {
+  if (tipo !== "" && marca !== ""&& modelo !== "" && precio !== "" && descripcion !== "" && imagen !== "" ) {
     
   if (mode === "add") {
     const id = uuidv4();
@@ -193,21 +193,27 @@ const mostrarProductos = () => {
 
     const tipoProducto = document.createElement("td");
     tipoProducto.textContent = producto.tipo;
+    tipoProducto.setAttribute('data-label', 'Producto');
 
     const marcaProducto = document.createElement("td");
     marcaProducto.textContent = producto.marca;
+    marcaProducto.setAttribute('data-label', 'Marca');
 
     const modeloProducto = document.createElement("td");
     modeloProducto.textContent = producto.modelo;
+    modeloProducto.setAttribute('data-label', 'Modelo');
 
     const precioProducto = document.createElement("td");
     precioProducto.textContent = "$" + producto.precio;
+    precioProducto.setAttribute('data-label', 'Precio');
 
     const descripcionProducto = document.createElement("td");
     descripcionProducto.textContent = producto.descripcion;
-
+    descripcionProducto.setAttribute('data-label', 'Descripcion');
+    
     const imagenCelda = document.createElement("td");
     const imagenProducto = document.createElement("img");
+    imagenCelda.setAttribute('data-label', 'Imagen');
     imagenProducto.src = producto.imagen;
     imagenProducto.alt = "Imagen de producto por URL";
     imagenProducto.classList.add("producto-imagen");
