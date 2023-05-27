@@ -91,7 +91,7 @@ botonLogout.addEventListener("click", () => {
     title: "¿Estás seguro de cerrar sesión?",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
+    confirmButtonColor: "#5e17eb",
     cancelButtonColor: "#d33",
     confirmButtonText: "Sí, continuar",
   }).then((result) => {
@@ -99,9 +99,14 @@ botonLogout.addEventListener("click", () => {
       Swal.fire("Sesión cerrada con éxito", "¡Hasta la próxima!", "success");
       localStorage.removeItem("usuario_logueado");
       if (window.location.pathname == "/productos.html" ) {
-        window.location.href = "productos.html";
+        // window.location.href = "productos.html";
+        setTimeout(() => {
+          document.location.href = "../productos.html";
+        }, "1500");
       } else {
-        window.location.href = "../productos.html"
+        setTimeout(() => {
+          document.location.href = "../productos.html";
+        }, "1500");
       }
     }
   });

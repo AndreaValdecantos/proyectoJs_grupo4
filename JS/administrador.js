@@ -84,45 +84,50 @@ function agregarProductoTabla(e) {
   const mode = agregarProductosForm.dataset.mode; // dataset es un objeto que contiene todos los atributos de un elemento
   const editId = agregarProductosForm.dataset.editId;
 
-  if (tipo !== "" && marca !== ""&& modelo !== "" && precio !== "" && descripcion !== "" && imagen !== "" ) {
-    
-  if (mode === "add") {
-    const id = uuidv4();
-    const producto = { id, tipo, marca, modelo, precio, descripcion, imagen };
-    productos.push(producto);
-  } else if (mode === "edit") {
-    const index = productos.findIndex((producto) => producto.id === editId);
-    if (index !== -1) {
-      const producto = productos[index];
-      producto.tipo = tipo;
-      producto.marca = marca;
-      producto.modelo = modelo;
-      producto.precio = precio;
-      producto.descripcion = descripcion;
-      producto.imagen = imagen;
+  if (
+    tipo !== "" &&
+    marca !== "" &&
+    modelo !== "" &&
+    precio !== "" &&
+    precio >= 0 &&
+    descripcion !== "" &&
+    imagen !== ""
+  ) {
+    if (mode === "add") {
+      const id = uuidv4();
+      const producto = { id, tipo, marca, modelo, precio, descripcion, imagen };
+      productos.push(producto);
+    } else if (mode === "edit") {
+      const index = productos.findIndex((producto) => producto.id === editId);
+      if (index !== -1) {
+        const producto = productos[index];
+        producto.tipo = tipo;
+        producto.marca = marca;
+        producto.modelo = modelo;
+        producto.precio = precio;
+        producto.descripcion = descripcion;
+        producto.imagen = imagen;
+      }
     }
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Producto agregado",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    //Limpiar el formulario
+    agregarProductosForm.reset();
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "<h5>Error</h5>",
+      text: "COMPLETA TODOS LOS CAMPOS PARA AGREGAR UN PRODUCTO",
+      footer: "<h6>No se aceptan precios negativos</h6>",
+    });
   }
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Producto agregado',
-    showConfirmButton: false,
-    timer: 1500
-  })
-  //Limpiar el formulario
-  agregarProductosForm.reset();
-} else {
-  Swal.fire({
-    icon: 'error',
-    title: '<h5>Error</h5>',
-    text: 'COMPLETA TODOS LOS CAMPOS PARA AGREGAR UN PRODUCTO',
-    footer: '<h6>No se aceptan precios negativos</h6>'
-  })
-}
   agregarProductosForm.dataset.mode = "add";
   addProductoButton.textContent = "Agregar";
-
-  
 
   //llamar a una funcion que actualiza la lista de productos
   mostrarProductos();
@@ -159,7 +164,7 @@ listaProductos.addEventListener("click", (e) => {
 listaProductos.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     Swal.fire({
-      title: "¿Desea eliminar el producto?",
+      title: "¿Desea eliminar este producto?",
       text: "¡No podrás revertir esto!",
       icon: "warning",
       showCancelButton: true,
@@ -193,27 +198,27 @@ const mostrarProductos = () => {
 
     const tipoProducto = document.createElement("td");
     tipoProducto.textContent = producto.tipo;
-    tipoProducto.setAttribute('data-label', 'Producto');
+    tipoProducto.setAttribute("data-label", "Producto");
 
     const marcaProducto = document.createElement("td");
     marcaProducto.textContent = producto.marca;
-    marcaProducto.setAttribute('data-label', 'Marca');
+    marcaProducto.setAttribute("data-label", "Marca");
 
     const modeloProducto = document.createElement("td");
     modeloProducto.textContent = producto.modelo;
-    modeloProducto.setAttribute('data-label', 'Modelo');
+    modeloProducto.setAttribute("data-label", "Modelo");
 
     const precioProducto = document.createElement("td");
     precioProducto.textContent = "$" + producto.precio;
-    precioProducto.setAttribute('data-label', 'Precio');
+    precioProducto.setAttribute("data-label", "Precio");
 
     const descripcionProducto = document.createElement("td");
     descripcionProducto.textContent = producto.descripcion;
-    descripcionProducto.setAttribute('data-label', 'Descripcion');
-    
+    descripcionProducto.setAttribute("data-label", "Descripcion");
+
     const imagenCelda = document.createElement("td");
     const imagenProducto = document.createElement("img");
-    imagenCelda.setAttribute('data-label', 'Imagen');
+    imagenCelda.setAttribute("data-label", "Imagen");
     imagenProducto.src = producto.imagen;
     imagenProducto.alt = "Imagen de producto por URL";
     imagenProducto.classList.add("producto-imagen");

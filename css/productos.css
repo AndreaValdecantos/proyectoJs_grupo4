@@ -798,7 +798,8 @@ svg:hover {
   }
 
   #caja-marcas {
-    height: 11rem;
+    /* border: 1px solid red; */
+    height: 8rem;
   }
 
   .selectPrecios {
@@ -958,9 +959,13 @@ svg:hover {
     display: none;
   }
   #lista-productos tr {
-    margin-bottom: 8px !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 1rem;
     border-bottom: #5e17eb solid 2px !important;
     display: block;
+  }
+  .delete, .edit {
+    margin-top: 1rem !important;
   }
   #lista-productos th,
   #lista-productos td {
@@ -983,6 +988,9 @@ svg:hover {
     font-weight: bold;
     /* text-transform: uppercase; */
     float: left;
+  }
+  .logo-nombre h3 {
+    display: none;
   }
 }
 
@@ -1182,8 +1190,9 @@ svg:hover {
   transition: 0.2s;
 }
 .administracion .delete:hover {
-  border: 2px solid #5e17eb;
-  background-color: #323741;
+  border: 2px solid #fc6e16;
+  /* background-color: #323741; */
+  background-color: red;
 }
 
 .administracion .producto-imagen {
