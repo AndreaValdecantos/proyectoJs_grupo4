@@ -37,7 +37,7 @@ body {
   color: white;
 }
 .bg {
-  background-image: url(./imageregistro/pexels-anete-lusina-4792722.jpg) !important;
+  background-image: url(../Source/imageregistro/pexels-anete-lusina-4792722.jpg) !important;
   background-position: center center;
   background-size: cover;
 }
@@ -1070,7 +1070,9 @@ svg:hover {
 
 /* ADMINISTRACIÓN */
 /* ----------------COMIENZO MAIN----------------- */
-
+.boton-hamburguesa-usuario {
+  color: white;
+}
 .administracion #caja-opciones-admi {
   background-color: #2a2f3b;
   width: 20rem;
