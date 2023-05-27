@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+.rellenar-corazon{
+  fill: rgb(255, 128, 0);
+}
+
+#lista-favoritos{
+  background-color: white;
+  position: relative;
+  z-index: 20;
+}
+#lista-favoritos .ver-mas-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-right: 1em;
+}
+#lista-favoritos .ver-mas-card svg{
+  margin-left: 2em;
+}
+
 body {
   background-color: #1b1c1d;
 }
@@ -569,7 +588,7 @@ main {
 #texto-card-producto h4:hover {
   color: #fc6e16;
 }
-#ver-mas-card {
+.ver-mas-card {
   /* border: 1px solid blue; */
   display: flex;
   align-items: center;
@@ -577,7 +596,7 @@ main {
   justify-content: center;
   margin-left: 2rem;
 }
-#ver-mas-card a {
+.ver-mas-card a {
   color: white;
   background-color: #5e17eb;
   padding: 6px 0.5rem 6px 0.5rem;
@@ -586,7 +605,7 @@ main {
   text-decoration: none;
   margin-bottom: 1rem;
 }
-#ver-mas-card a:hover {
+.ver-mas-card a:hover {
   background-color: #fc6e16;
   color: white;
 }
@@ -860,7 +879,7 @@ svg:hover {
   #texto-card-producto h5 {
     font-size: 13.5px;
   }
-  #ver-mas-card a {
+  .ver-mas-card a {
     text-align: center;
     font-size: 14px;
     padding: 0;

@@ -3,7 +3,7 @@ usuarioLogueado = JSON.parse(localStorage.getItem("usuario_logueado")) || false;
 console.log(usuarioLogueado.nombre);
 
 if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
-  window.location.href = "productos.html";
+  window.location.href = "error-404/error404.html";
 } else {
   //Javascript de Botones Cuentas en ADMISTRADOR
   const dropdownsCuentas = document.querySelectorAll(".dropdownCuentas");
@@ -165,7 +165,7 @@ listaProductos.addEventListener("click", (e) => {
       showCancelButton: true,
       confirmButtonColor: "#5e17eb",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Si, Eliminar",
+      confirmButtonText: "Sí, Eliminar",
     }).then((result) => {
       if (result.isConfirmed) {
         const id = e.target.dataset.id;
@@ -175,8 +175,8 @@ listaProductos.addEventListener("click", (e) => {
           mostrarProductos();
         }
         Swal.fire(
-          "Eliminado!",
-          "Su producto ha sido eliminado con exito.",
+          "¡Eliminado!",
+          "Su producto ha sido eliminado con éxito.",
           "success"
         );
       }

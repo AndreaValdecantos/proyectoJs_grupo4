@@ -53,7 +53,8 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5 modal-titulo" id="exampleModalLabel">Inicio de sesión</h1>
+                  <h1 class="modal-title fs-5 modal-titulo" id="exampleModalLabel">Inicio de sesión
+                  </h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                     id="cerrar-modal"></button>
                 </div>
@@ -62,17 +63,16 @@
                     <div class="mb-3" id="div-email">
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
-                        required minlength="15" maxlength="30">
+                        required maxlength="30">
                     </div>
                     <div class="mb-3" id="div-clave">
                       <label for="clave" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" name="clave" id="clave" required minlength="5"
-                        maxlength="12">
+                      <input type="password" class="form-control" name="clave" id="clave" required>
                       <img src="imgLogin/mostrarClave.png" alt="mostrar contraseña" id="mostrar-clave">
                       <img src="imgLogin/ocultarClave.png" alt="ocultar contraseña" id="ocultar-clave" class="ocultar">
                     </div>
                     <div class="sin-cuenta">
-                      <p>¿No tienes una cuenta? <a href="#" class="link-registro">Registrarse</a></p>
+                      <p>¿No tienes una cuenta? <a href="./registro.html" class="link-registro">Registrarse</a></p>
                     </div>
                     <p class="mensaje-usuario">Usuario y/o contraseña incorrectos</p>
                     <div class="row justify-content-center p-2">
@@ -84,7 +84,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </nav>
@@ -131,16 +130,6 @@
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
-
-
 
             </div>
           </div>
@@ -204,7 +193,7 @@
           <div class="card">
             <img src="./img.about/andrafoto.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Andrea Valdecanto</h5>
+              <h5 class="card-title">Andrea Valdecantos</h5>
               <div class="linkedin-git">
                 <a href="https://github.com/LautaroGruiz" target="_blank" class="github">GitHub</a>
                 <a href="https://www.linkedin.com/in/lautagruiz/" target="_blank" class="linkedin">LinkedIn</a>
@@ -257,6 +246,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="./productos.js"></script>
+<script src="./login.js"></script>
 
 
 </html>
