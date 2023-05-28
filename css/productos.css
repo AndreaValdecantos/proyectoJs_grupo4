@@ -954,7 +954,7 @@ svg:hover {
     display: none;
   }
 }
-@media (min-width: 768px)  {
+@media (width: 768px)  {
     .novedades {
       height: 10rem !important;
     }
