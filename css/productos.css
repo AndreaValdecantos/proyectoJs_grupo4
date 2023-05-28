@@ -916,45 +916,6 @@ svg:hover {
     margin-bottom: 5px;
     width: 95% !important;
   }
-  /* #lista-productos {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-  }
-  #lista-productos tr {
-    border-bottom: 1px solid rgb(151, 15, 144);
-    padding-bottom: 5px;
-    width: 100% !important;
-    font-size: 11px;
-  }
-  #lista-productos th {
-    border: 1px solid rgb(168, 144, 38);
-    font-size: 12px;
-    width: 100% !important;
-    padding: 0 2.5px 0 2.5px !important;
-  }
-  tbody {
-    display: flex;
-    flex-direction: column !important;
-  }
-  #lista-productos td {
-    border: 1px solid white;
-    padding: 0 2px 0 5px;
-    font-size: 12px;
-  }
-  .producto-imagen {
-    width: 3rem !important;
-    height: 3rem !important;
-  }
-  .edit, .delete {
-    width: 3rem !important;
-    height: 2rem !important;
-    padding: 0 !important;
-    font-size: 11px;
-  }
-  .acciones-para-r {
-    display: none;
-  } */
   #lista-productos thead {
     display: none;
   }
@@ -992,6 +953,30 @@ svg:hover {
   .logo-nombre h3 {
     display: none;
   }
+}
+@media (min-width: 768px)  {
+    .novedades {
+      height: 10rem !important;
+    }
+    #texto-card-producto h4 {
+      font-size: 24px;
+    }
+    #texto-card-producto h6 {
+      font-size: 20px;
+    }
+    #texto-card-producto h5 {
+      font-size: 22px;
+    }
+    .ver-mas-card a {
+      text-align: center;
+      font-size: 22px;
+      padding: 0;
+      margin-right: 6px;
+      width: 4rem;
+    }
+    #columna-imagen-card {
+      width: 20%;
+    }
 }
 
 /* ABOUT*/
