@@ -9,11 +9,9 @@ header {
   background-color: #0e0f0f;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  /* border-bottom: 3px solid #2a2f3b; */
   position: sticky;
   top: 0%;
   z-index: 1;
-  /* border: 1px solid red; */
 }
 nav {
   height: 100%;
@@ -29,13 +27,11 @@ nav {
   align-items: center;
   width: 20rem;
   margin-left: 4rem;
-  /* border: 1px solid rgb(0, 255, 42); */
 }
 .logo-tittle-admi h3 {
   color: white;
   font-size: 1.5rem;
   margin-left: 0.5rem;
-  /* border: 1px solid rgb(89, 0, 255); */
 }
 nav img {
   height: 100%;
@@ -46,7 +42,6 @@ nav img {
   display: flex;
   justify-content: center;
   margin-right: 4.7rem;
-  /* border: 1px solid red; */
 }
 .iniciar-sesion {
   border-right: 3px solid #5e17eb;
@@ -166,16 +161,13 @@ main {
   background: #323741;
 }
 #caja-contenido-admi {
-  /* border: 1px solid red; */
   margin: 0 auto;
   width: 60rem;
 }
 form {
   margin-bottom: 4rem;
-  /* border: 1px solid rebeccapurple; */
 }
 fieldset {
-  /* border: 1px solid royalblue; */
   text-align: center;
 }
 label {
@@ -208,7 +200,6 @@ h2 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #lista-productos {
-  /* border: 1px solid darkgreen; */
   width: 100%;
 }
 th {
@@ -216,17 +207,13 @@ th {
   color: white;
   padding-bottom: 5px;
   border-bottom: 3px solid #323741;
-  /* border: 1px solid darkgreen; */
 }
 tr {
   padding-top: 5px;
   text-align: center;
   color: white;
-  /* border: 1px solid white; */
 }
-/* td {
-  border: 1px solid white;
-} */
+
 .edit {
   background-color: #323741;
   padding: 3px 0.5rem 3px 0.5rem;
@@ -257,5 +244,4 @@ tr {
 .producto-imagen {
   width: 5rem;
   height:5rem;
-  /* border: 1px solid red; */
 }

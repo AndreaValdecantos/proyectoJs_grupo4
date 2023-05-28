@@ -58,12 +58,11 @@ header {
 
 nav {
   height: 100%;
-  /* border: 1px solid red; */
   padding-top: 1em !important;
 }
 
 .navbar-collapse {
-  /* border: 1px solid red; */
+
   background-color: #0e0f0f;
   padding: 0% !important;
   margin: 0% !important;
@@ -72,7 +71,6 @@ nav {
 .navbar-brand img {
   height: 7rem;
   margin: 0;
-  /* border: 1px solid red; */
 }
 
 .formulario-busqueda input {
@@ -114,7 +112,6 @@ nav {
   color: white;
   padding-right: 0.5em;
   margin-bottom: 3em;
-  /* border: 1px solid red; */
 }
 
 .logo-nombre a {
@@ -139,7 +136,6 @@ nav {
   .navbar-collapse {
     background-color: #0e0f0f;
     padding: 1em;
-    /* border: 1px solid red; */
   }
 
   .navbar-collapse ul {
@@ -359,7 +355,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 0.6rem;
-  /* border: 1px solid red; */
 }
 
 #caja-card-productos {
@@ -372,7 +367,6 @@ main {
 }
 
 .dropdown {
-  /* border: 1px solid red; */
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 0.5rem;
 }
@@ -553,7 +547,6 @@ main {
 .novedades {
   width: 100%;
   height: 8rem;
-  /* background-color: rgb(255, 255, 255); */
   background-color: #23242a;
   margin-bottom: 1.2rem;
   border-radius: 2px;
@@ -565,7 +558,6 @@ main {
   display: flex;
 }
 #columna-imagen-card {
-  /* border: 1px solid red; */
   width: 15%;
 }
 #columna-imagen-card img {
@@ -574,7 +566,6 @@ main {
   border-radius: 3px;
 }
 #texto-card-producto {
-  /* border: 1px solid red; */
   margin-left: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -589,7 +580,6 @@ main {
   color: #fc6e16;
 }
 .ver-mas-card {
-  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -635,7 +625,6 @@ footer {
 .contacton-telefono {
   text-align: center;
   color: white;
-  /* border: green 1px solid; */
 }
 
 .contacto {
@@ -677,7 +666,6 @@ footer {
 }
 
 .redes {
-  /* border: 1px solid yellow; */
   text-align: center;
   color: white;
   width: 7rem;
@@ -689,7 +677,6 @@ footer {
 }
 
 .iconos-redes {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -718,26 +705,22 @@ svg:hover {
     height: 5rem;
     margin-bottom: 3rem;
     margin-left: 1rem;
-    /* border: 1px solid red; */
   }
   .logo-nombre {
     width: 32%;
     height: 5rem !important;
     justify-content: center;
-    /* border: 1px solid red; */
   }
 
   .logo-nombre a {
     border-right: none;
     margin-left: 6rem;
-    /* border: 1px solid red; */
   }
   .logo-nombre img {
     height: 100%;
   }
 
   .busqueda {
-    /* border: 1px solid red; */
     position: absolute;
     bottom: 5px;
   }
@@ -754,7 +737,6 @@ svg:hover {
     height: 2rem;
     display: flex;
     align-items: center;
-    /* border: 1px solid rgb(0, 174, 255); */
   }
   .navbar-collapse {
     position: absolute;
@@ -769,7 +751,6 @@ svg:hover {
     width: 100% !important;
   }
   .selectCuentas {
-    /* border: 1px solid red; */
     width: 8rem;
     height: 2.2rem;
     font-size: 12.5px;
@@ -794,11 +775,9 @@ svg:hover {
   #caja-card-productos {
     width: 100% !important;
     margin: 0 auto;
-    /* border: 1px solid red; */
   }
 
   #caja-marcas {
-    /* border: 1px solid red; */
     height: 8rem;
   }
 
@@ -896,17 +875,14 @@ svg:hover {
   }
  
   #caja-contenido-admi {
-    /* border: 1px solid rgb(11, 112, 19); */
     display: flex;
     flex-direction: column;
     align-items: center !important;
   }
   #agregarProductosForm {
     width: 95%;
-    /* border: 1px solid red; */
   }
   fieldset {
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -947,7 +923,6 @@ svg:hover {
   #lista-productos td::before {
     content: attr(data-label);
     font-weight: bold;
-    /* text-transform: uppercase; */
     float: left;
   }
   .logo-nombre h3 {
@@ -998,16 +973,13 @@ svg:hover {
   color: white;
   background-color: #1b1c1d;
   border: none;
-  /* border: 1px solid red; */
 }
 .card-img-top {
   width: 90%;
   height: 11rem;
   border-radius: 60%;
-  /* border: 1px solid red; */
 }
 .card-body {
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1016,7 +988,6 @@ svg:hover {
   font-size: 16px;
 }
 .linkedin-git {
-  /* border: 1px solid red; */
   width: 100% !important;
   display: flex;
   justify-content: space-evenly !important;
@@ -1077,7 +1048,6 @@ svg:hover {
   border-right: 2px solid #14161b;
 }
 .administracion .caja-listado {
-  /* border: 1px solid red; */
   width: 100%;
   height: 5rem;
   display: flex;
@@ -1091,16 +1061,13 @@ svg:hover {
   background: #323741;
 }
 .administracion #caja-contenido-admi {
-  /* border: 1px solid red; */
   margin: 0 auto;
   width: 60rem;
 }
 .administracion form {
   margin-bottom: 4rem;
-  /* border: 1px solid rebeccapurple; */
 }
 .administracion fieldset {
-  /* border: 1px solid royalblue; */
   text-align: center;
 }
 .administracion label {
@@ -1133,7 +1100,6 @@ svg:hover {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .administracion #lista-productos {
-  /* border: 1px solid darkgreen; */
   width: 100%;
 }
 .administracion th {
@@ -1141,17 +1107,13 @@ svg:hover {
   color: white;
   padding-bottom: 5px;
   border-bottom: 3px solid #323741;
-  /* border: 1px solid darkgreen; */
 }
 .administracion tr {
   padding-top: 5px;
   text-align: center;
   color: white;
-  /* border: 1px solid white; */
 }
-/* td {
-  border: 1px solid white;
-} */
+
 .administracion .edit {
   background-color: #323741;
   padding: 3px 0.5rem 3px 0.5rem;
@@ -1176,28 +1138,24 @@ svg:hover {
 }
 .administracion .delete:hover {
   border: 2px solid #fc6e16;
-  /* background-color: #323741; */
   background-color: red;
 }
 
 .administracion .producto-imagen {
   width: 5rem;
   height: 5rem;
-  /* border: 1px solid red; */
 }
 
 /* -----------REGISTRO------------ */
 .rounded-end {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid red; */
 }
 .body-registro {
   padding: 1%;
 }
 .text-end {
   height: 3rem;
-  /* border: 1px solid red; */
   text-align: center !important;
 }
 .text-end img {
@@ -1207,13 +1165,7 @@ svg:hover {
   padding: 0 !important;
   margin: 0% !important;
 }
-/* .foto-de-registro {
-  height: 30rem;
-}
 
-.registro-input {
-  height: 30rem;
-} */
 @media (min-width: 320px) and (max-width: 1023px) {
   .body-registro {
     padding: 0%;

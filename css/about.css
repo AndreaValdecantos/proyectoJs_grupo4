@@ -14,7 +14,6 @@ header {
   position: sticky;
   top: 0%;
   z-index: 1;
-  /* border: 1px solid red; */
 }
 nav {
   height: 100%;
@@ -30,13 +29,11 @@ nav {
   align-items: center;
   width: 22rem;
   margin-left: 4rem;
-  /* border: 1px solid rgb(0, 255, 42); */
 }
 .logo-tittle-admi h3 {
   color: white;
   font-size: 1.5rem;
   margin-left: 0.5rem;
-  /* border: 1px solid rgb(89, 0, 255); */
 }
 nav img {
   height: 100%;
@@ -47,7 +44,6 @@ nav img {
   display: flex;
   justify-content: center;
   margin-right: 4.7rem;
-  /* border: 1px solid red; */
 }
 .iniciar-sesion {
   border-right: 3px solid #5e17eb;
