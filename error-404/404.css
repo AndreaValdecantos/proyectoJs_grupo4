@@ -1,0 +1,171 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  /* font-family: Arial, Helvetica, sans-serif !important; */
+}
+
+/* -----------------COMIENZO NAV----------------- */
+header {
+  height: 7rem;
+  background-color: #0e0f0f;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+}
+
+nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav img {
+  height: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+  header {
+    width: 100%;
+    height: 10rem;
+  }
+
+  nav img {
+    height: 5rem;
+    margin-bottom: 0rem;
+    margin-left: 1rem;
+  }
+}
+
+.booton {
+  margin-bottom: 1rem;
+  background-color: #7b06ef;
+  color: aliceblue;
+  border-radius: 1rem;
+  width: 0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  align-items: center;
+}
+
+/* -----------------FIN NAV----------------- */
+
+/*Main styles */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+  fill: none;
+  stroke-width: 6;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #aeadae;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+
+.text:nth-child(5n + 2) {
+  stroke: #5103af;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #a0a1a2;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #7202fa;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #ababab;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+.error404 {
+  background: #2c2c2c;
+  background-size: 0.2em 100%;
+  font: 14.5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+  background-repeat: no-repeat;
+  height: 35rem;
+}
+
+.svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.letras {
+  height: 2rem;
+  width: 55rem;
+}
+
+p {
+  font-size: 25px;
+  margin-top: 100px;
+  color: white;
+  height: 8rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  left: 0;
+  margin-bottom: 0 !important;
+}
+
+a {
+  width: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 1px;
+  color: #ffffff;
+  display: block;
+  border-right: 3px solid #5e17eb;
+}
+footer {
+    height: 0.5rem;
+    background-color: #0e0f0f;
+
+}
+@media (min-width: 320px) and (max-width: 1029px) {
+  footer {
+    height: 3.2rem;
+    background-color: #0e0f0f;
+  }
+  p {
+    font-size: 15px;
+    margin-top: 0;
+  }
+}
