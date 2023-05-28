@@ -60,7 +60,7 @@ formularioLogin.addEventListener("submit", (e) => {
       showConfirmButton: false,
       timer: 2000
     })
-    setInterval(function () {window.location.href = "../productos.html"}, 2000)
+    setInterval(function () {window.location.href = "../index.html"}, 2000)
     localStorage.setItem("usuario_logueado", JSON.stringify(usuarioEncontrado))
     formularioLogin.reset()
   } else {

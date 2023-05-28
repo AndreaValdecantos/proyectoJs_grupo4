@@ -50,7 +50,7 @@ formularioRegistro.addEventListener("submit", (e) => {
         timer: 1500,
       });
       setTimeout(() => {
-        document.location.href = "../productos.html";
+        document.location.href = "../index.html";
       }, "1000");
       formularioRegistro.reset();
     } else {

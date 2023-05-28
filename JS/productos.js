@@ -98,14 +98,13 @@ botonLogout.addEventListener("click", () => {
     if (result.isConfirmed) {
       Swal.fire("Sesión cerrada con éxito", "¡Hasta la próxima!", "success");
       localStorage.removeItem("usuario_logueado");
-      if (window.location.pathname == "/productos.html" ) {
-        // window.location.href = "productos.html";
+      if (window.location.pathname == "/index.html") {
         setTimeout(() => {
-          document.location.href = "../productos.html";
+          document.location.href = "../index.html";
         }, "1500");
       } else {
         setTimeout(() => {
-          document.location.href = "../productos.html";
+          document.location.href = "../index.html";
         }, "1500");
       }
     }
