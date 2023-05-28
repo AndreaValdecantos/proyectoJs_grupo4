@@ -241,7 +241,6 @@ const mostrarProductos = () => {
     tr.appendChild(precioProducto);
     tr.appendChild(descripcionProducto);
     tr.appendChild(imagenCelda);
-    // tr.appendChild(celdaBoton)
     tr.appendChild(editarButton);
     tr.appendChild(eliminarButton);
 
@@ -271,7 +270,3 @@ function cargarLocalStorage() {
 }
 cargarLocalStorage();
 
-// function actualizarLocalStorage() {
-//   let jsonAGuardar = JSON.stringify(productos);
-//   localStorage.setItem("productos", jsonAGuardar);
-// };

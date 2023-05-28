@@ -41,11 +41,10 @@ formularioRegistro.addEventListener("submit", (e) => {
         clave: clave.value,
       });
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
-      // alert("Registro exitoso")
       Swal.fire({
         position: "center",
         icon: "success",
-        title: "Te has registrado con exito",
+        title: "Te has registrado con éxito",
         showConfirmButton: false,
         timer: 1500,
       });
