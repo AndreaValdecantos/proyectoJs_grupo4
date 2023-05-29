@@ -165,7 +165,6 @@ listaProductos.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     const id = e.target.dataset.id;
     const index = productos.find((producto) => producto.id === id);
-    console.log(index);
     Swal.fire({
       title:
         "¿Desea eliminar " +
@@ -271,7 +270,6 @@ function uuidv4() {
 // obtener los productos del local storage
 function cargarLocalStorage() {
   const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
-  console.log(productosLocalStorage);
   if (productosLocalStorage) {
     productos = productosLocalStorage;
     mostrarProductos();

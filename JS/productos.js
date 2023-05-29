@@ -150,8 +150,6 @@ crearCards();
 
 // -----------------------FILTROS--------------------------------------------
 let tituloStock = document.getElementById("titulo-stock");
-console.log(tituloStock.textContent);
-
 function cambiarTitulo() {
   let contador = 0;
 
