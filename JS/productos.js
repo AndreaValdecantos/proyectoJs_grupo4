@@ -149,7 +149,21 @@ function crearCards() {
 crearCards();
 
 // -----------------------FILTROS--------------------------------------------
+let tituloStock = document.getElementById("titulo-stock");
+function cambiarTitulo() {
+  let contador = 0;
 
+  arrayTarjetas.forEach((tarjeta) => {
+    if (tarjeta.classList.contains("ocultar-elemento")) {
+      contador++;
+    }
+  });
+  if (arrayTarjetas.length == contador) {
+    tituloStock.textContent = "Producto/s no encontrado";
+  } else {
+    tituloStock.textContent = "Productos en stock";
+  }
+}
 //Filtro de Marcas Y Productos
 let botonFiltroTeclados = document.getElementById("teclados");
 let botonFiltroAuriculares = document.getElementById("auriculares");
@@ -158,11 +172,13 @@ let botonFiltroLogitech = document.getElementById("productosLogitech");
 let botonFiltroRedDragon = document.getElementById("productosRedDragon");
 let botonFiltroHyperex = document.getElementById("Hyperex");
 let tarjetaProducto = document.getElementsByClassName("novedades");
+let tituloMarcas = document.getElementById("titulo-marcas-filtro");
+let tituloProductos = document.getElementById("titulo-productos-filtro");
 let arrayTarjetas = Array.from(tarjetaProducto);
 
 botonFiltroTeclados.addEventListener("click", (e) => {
   e.preventDefault();
-
+  tituloMarcas.textContent = "Marcas";
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("mouse") ||
@@ -173,11 +189,12 @@ botonFiltroTeclados.addEventListener("click", (e) => {
       tarjeta.classList.remove("ocultar-elemento");
     }
   });
+  cambiarTitulo();
 });
 
 botonFiltroMouse.addEventListener("click", (e) => {
   e.preventDefault();
-
+  tituloMarcas.textContent = "Marcas";
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("teclado") ||
@@ -192,7 +209,7 @@ botonFiltroMouse.addEventListener("click", (e) => {
 
 botonFiltroAuriculares.addEventListener("click", (e) => {
   e.preventDefault();
-
+  tituloMarcas.textContent = "Marcas";
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("teclado") ||
@@ -203,11 +220,12 @@ botonFiltroAuriculares.addEventListener("click", (e) => {
       tarjeta.classList.remove("ocultar-elemento");
     }
   });
+  cambiarTitulo();
 });
 
 botonFiltroLogitech.addEventListener("click", (e) => {
   e.preventDefault();
-
+  tituloProductos.textContent = "Productos";
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("RedDragon") ||
@@ -218,10 +236,11 @@ botonFiltroLogitech.addEventListener("click", (e) => {
       tarjeta.classList.remove("ocultar-elemento");
     }
   });
+  cambiarTitulo();
 });
 botonFiltroHyperex.addEventListener("click", (e) => {
   e.preventDefault();
-
+  tituloProductos.textContent = "Productos";
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("RedDragon") ||
@@ -232,10 +251,11 @@ botonFiltroHyperex.addEventListener("click", (e) => {
       tarjeta.classList.remove("ocultar-elemento");
     }
   });
+  cambiarTitulo();
 });
 botonFiltroRedDragon.addEventListener("click", (e) => {
   e.preventDefault();
-
+  tituloProductos.textContent = "Productos";
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("Hyperex") ||
@@ -246,6 +266,7 @@ botonFiltroRedDragon.addEventListener("click", (e) => {
       tarjeta.classList.remove("ocultar-elemento");
     }
   });
+  cambiarTitulo();
 });
 
 /*************************************/
@@ -253,6 +274,8 @@ botonFiltroRedDragon.addEventListener("click", (e) => {
 //Filtro buscador input
 const formularioBusqueda = document.getElementById("buscador-nav");
 formularioBusqueda.addEventListener((type = "keyup"), (e) => {
+  tituloProductos.textContent = "Productos";
+  tituloMarcas.textContent = "Marcas";
   if (e.target.matches("#buscador-nav")) {
     arrayTarjetas.forEach((tarjeta) => {
       if (
@@ -265,6 +288,7 @@ formularioBusqueda.addEventListener((type = "keyup"), (e) => {
         tarjeta.classList.add("ocultar-elemento");
       }
     });
+    cambiarTitulo();
   }
 });
 
