@@ -1,8 +1,9 @@
 
 # PRODIGY PC
-Presentamos nuestro proyecto, basado en una carta de presentacion con productos perifericos para tu PC.
+Presentamos nuestro proyecto, basado en una carta de presentación con productos periféricos para tu PC.
+https://prodigypc.netlify.app/index.html
 
-## Lenguajes y Tecnologias
+## Lenguajes y Tecnologías
 
  - HTML
  - CSS
@@ -25,7 +26,7 @@ Presentamos nuestro proyecto, basado en una carta de presentacion con productos 
 
 ## Funcionalidad
 
-Esta pagina web tiene usabilidad como usuario Invitado, Registrado y Admisnistrador.
+Esta página web tiene usabilidad como usuario Invitado, Registrado y Administrador.
 
 
 
@@ -33,11 +34,11 @@ Esta pagina web tiene usabilidad como usuario Invitado, Registrado y Admisnistra
 Como usuario Invitado solo puedes usar nuestras opciones de filtrado para ver el tipo de marca y producto que desees.
 
 
-Si te registraste y tienes una cuenta en Prodigy PC, en tu barra de navegacion tendras la opcion de iniciar sesion y cerrar sesion cuando lo desees.
+Si te registraste y tienes una cuenta en Prodigy PC, en tu barra de navegación tendrás la opción de iniciar sesión y cerrar sesión cuando lo desees.
 
 
-Solo existe una cuenta de administrador, al ingresar a la web desde esa cuenta tienes la opcion de agregar, editar y eliminar productos los cuales desees mostrar a los usuarios comunes.
+Solo existe una cuenta de administrador, al ingresar a la web desde esa cuenta tienes la opción de agregar, editar y eliminar productos los cuales desees mostrar a los usuarios comunes.
 
-En estas tres tipo de cuentas, puedes acceder a una seccion llamada Nosotors, en la cual nos presentamos los integrantes del grupo y contamos algo sobre nosotros.
+En estas tres tipo de cuentas, puedes acceder a una sección llamada Nosotros, en la cual nos presentamos los integrantes del grupo y contamos algo sobre nosotros.
 
 
