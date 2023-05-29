@@ -163,8 +163,18 @@ listaProductos.addEventListener("click", (e) => {
 // Funcion para eliminar productos
 listaProductos.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
+    const id = e.target.dataset.id;
+    const index = productos.find((producto) => producto.id === id);
+    console.log(index);
     Swal.fire({
-      title: "¿Desea eliminar este producto?",
+      title:
+        "¿Desea eliminar " +
+        index.tipo +
+        " " +
+        index.marca +
+        " " +
+        index.modelo +
+        "?",
       text: "¡No podrás revertir esto!",
       icon: "warning",
       showCancelButton: true,
@@ -173,8 +183,7 @@ listaProductos.addEventListener("click", (e) => {
       confirmButtonText: "Sí, Eliminar",
     }).then((result) => {
       if (result.isConfirmed) {
-        const id = e.target.dataset.id;
-        const index = productos.findIndex((producto) => producto.id === id); // tiene que ser true para que lo encuentre
+        // tiene que ser true para que lo encuentre
         if (index !== -1) {
           productos.splice(index, 1);
           mostrarProductos();
@@ -269,4 +278,3 @@ function cargarLocalStorage() {
   }
 }
 cargarLocalStorage();
-
