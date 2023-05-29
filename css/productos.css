@@ -586,7 +586,7 @@ main {
   justify-content: center;
   margin-left: 2rem;
 }
-.ver-mas-card a {
+.ver-mas-card a{
   color: white;
   background-color: #5e17eb;
   padding: 6px 0.5rem 6px 0.5rem;
@@ -594,9 +594,10 @@ main {
   transition: 0.2s;
   text-decoration: none;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .ver-mas-card a:hover {
-  background-color: #fc6e16;
+  background-color: #fc6e16 !important;
   color: white;
 }
 /* -----------------FIN MAIN----------------- */
@@ -1213,4 +1214,8 @@ svg:hover {
   background-color: #5e17eb;
   color: white;
   margin-top: 1rem;
+}
+
+.img-hardcode-modal img {
+  width: 100% !important;
 }

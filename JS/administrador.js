@@ -1,7 +1,4 @@
 usuarioLogueado = JSON.parse(localStorage.getItem("usuario_logueado")) || false;
-
-console.log(usuarioLogueado.nombre);
-
 if (!usuarioLogueado || usuarioLogueado.email != "admin@correo") {
   window.location.href = "error-404/error404.html";
 } else {
@@ -164,16 +161,10 @@ listaProductos.addEventListener("click", (e) => {
 listaProductos.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
     const id = e.target.dataset.id;
-    const index = productos.find((producto) => producto.id === id);
+    const indexProducto = productos.find((producto) => producto.id === id);
     Swal.fire({
       title:
-        "¿Desea eliminar " +
-        index.tipo +
-        " " +
-        index.marca +
-        " " +
-        index.modelo +
-        "?",
+        "¿Desea eliminar " + indexProducto.tipo + " " + indexProducto.marca + " " + indexProducto.modelo + "?",
       text: "¡No podrás revertir esto!",
       icon: "warning",
       showCancelButton: true,
@@ -182,6 +173,7 @@ listaProductos.addEventListener("click", (e) => {
       confirmButtonText: "Sí, Eliminar",
     }).then((result) => {
       if (result.isConfirmed) {
+        const index = productos.findIndex((producto) => producto.id === id);
         // tiene que ser true para que lo encuentre
         if (index !== -1) {
           productos.splice(index, 1);
