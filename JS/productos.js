@@ -159,7 +159,7 @@ function cambiarTitulo() {
     }
   });
   if (arrayTarjetas.length == contador) {
-    tituloStock.textContent = "Producto/s no encontrado";
+    tituloStock.textContent = "No disponible :(";
   } else {
     tituloStock.textContent = "Productos en stock";
   }
@@ -229,7 +229,7 @@ botonFiltroLogitech.addEventListener("click", (e) => {
   arrayTarjetas.forEach((tarjeta) => {
     if (
       tarjeta.classList.contains("RedDragon") ||
-      tarjeta.classList.contains("Hyperex")
+      tarjeta.classList.contains("Hyperx")
     ) {
       tarjeta.classList.add("ocultar-elemento");
     } else {
@@ -258,7 +258,7 @@ botonFiltroRedDragon.addEventListener("click", (e) => {
   tituloProductos.textContent = "Productos";
   arrayTarjetas.forEach((tarjeta) => {
     if (
-      tarjeta.classList.contains("Hyperex") ||
+      tarjeta.classList.contains("Hyperx") ||
       tarjeta.classList.contains("Logitech")
     ) {
       tarjeta.classList.add("ocultar-elemento");
